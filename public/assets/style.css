@@ -46,7 +46,7 @@
 }
 
 body {
-    font-family: var(--ff-shubbak);
+    /* font-family: var(--ff-shubbak); */
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -73,58 +73,6 @@ body::-webkit-scrollbar-thumb {
 ****
 */
 
-.navbar {
-    background: var(--blue);
-    height: 92px;
-    border-bottom: 5px solid var(--brown);
-    position: fixed;
-    width: 100%;
-    z-index: 2;
-}
-.navbar.index-4 {
-    z-index: 4;
-}
-.navbar-collapse.collapse.show .navbar-nav {
-    width: 100%;
-    background: var(--blue);
-    position: absolute;
-    top: 92px;
-    left: 0;
-    border-radius: 0 0 10px 10px;
-    padding: 1rem;
-}
-.collapsing {
-    height: 0;
-    transition: 0 !important;
-}
-.nav-link:hover {
-    transition: var(--transition-1);
-    color: var(--brown) !important;
-}
-.logo {
-    width: 40%;
-    padding-inline-start: 2rem;
-    perspective: 400px;
-}
-.box_logo {
-    position: relative;
-    transform-style: preserve-3d;
-    animation: flip 6s ease infinite forwards;
-}
-
-.box_logo .face {
-    position: absolute;
-    backface-visibility: hidden;
-}
-.box_logo .back {
-    transform: rotateY(180deg);
-}
-
-@media (min-width: 992px) {
-    .navbar-expand-lg .navbar-collapse {
-        justify-content: space-around;
-    }
-}
 /*
 ****
 * headerr
@@ -136,64 +84,12 @@ body::-webkit-scrollbar-thumb {
 * footer
 ****
 */
-.footer {
-    background: var(--blue);
-    padding-block: 7rem 1rem;
-    position: relative;
-    z-index: 1;
-}
 
-.footer form {
-    position: relative;
-    z-index: 4;
-    color: var(--white);
-}
-.footer form input,
-.footer form textarea {
-    border-radius: 4px;
-}
-
-.footer .btn {
-    background-color: transparent;
-}
-.footer .btn:hover,
-.footer .btn:focus {
-    color: var(--green);
-    border: 1px solid var(--green);
-}
-
-.footer input:focus,
-.footer textarea:focus {
-    box-shadow: none;
-    /* outline: 2px solid var(--green); */
-}
-
-.copyright {
-    background: var(--white);
-    color: var(--blue);
-    font-size: 18px;
-    font-weight: bold;
-    padding: 1.5rem;
-    margin-bottom: -1rem;
-}
-.copyright .year {
-    color: var(--green);
-}
 /*
 ****
 * whatapp btn
 ****
 */
-.whatapp {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 99;
-    border-radius: 50%;
-    /* box-shadow: 0 0 1px 2px var(--brown); */
-    transition: var(--transition-1);
-    animation: hithere 1s ease infinite;
-}
 
 /*
 ****
@@ -205,15 +101,3 @@ body::-webkit-scrollbar-thumb {
 * animation
 ****
 */
-
-@keyframes flip {
-    0%,
-    100% {
-        transform: rotateY(0deg);
-    }
-    20%,
-    40%,
-    60% {
-        transform: rotateY(-180deg);
-    }
-}
