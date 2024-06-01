@@ -2,7 +2,10 @@
 
 return [
     'USERS' => 'المستخدمين',
+    'Sign In to Dashboard' => 'تسجيل الدخول إلى لوحة التحكم',
     'role_id' => 'معرف الدور',
+    'login' => 'تسجيل الدخول',
+    'please wait' => 'يرجى الانتظار',
     'created_at' => 'تاريخ الإنشاء',
     'actions' => 'الإجراءات',
     'users' => 'المستخدمين',
@@ -29,6 +32,9 @@ return [
     'service' => 'الخدمة',
     'type_service' => 'نوع الخدمة',
     'city' => 'المدينة',
+    'message' => 'عرض',
+    'delete' => 'حذف',
+
     'name' => 'الاسم',
     'company' => 'الشركة',
     'phone' => 'الهاتف',

@@ -173,6 +173,11 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'form' => [
+            'required' => 'This field is required',
+            'numeric' => 'This field must be a number',
+            'email' => "This field must be a valid email address",
+        ],
     ],
 
     /*

@@ -31,16 +31,6 @@
 </head>
 
 <body class="p-6">
-
-    <!--------------
-        Navigation
-    --------------->
-
-
-
-    <!--------------
-        Landing
-    --------------->
     <!--------------
         Main Content
     --------------->
@@ -49,18 +39,19 @@
             <div class="flex gap-8">
                 <div>
                     <select class="service" name="service" class="rounded-lg">
-                        <option value="0" data-display="{{ __('Choose services') }}">{{ __('Choose services') }}
+                        <option value="0" data-display="{{ __('front.Choose services') }}">
+                            {{ __('front.Choose services') }}
                         </option>
-                        <option value="buy">{{ __('Buy') }}</option>
-                        <option value="rent">{{ __('Rent') }}</option>
-                        <option value="investment">{{ __('Investment opportunity') }}</option>
+                        <option value="buy">{{ __('front.Buy') }}</option>
+                        <option value="rent">{{ __('front.Rent') }}</option>
+                        <option value="investment">{{ __('front.Investment opportunity') }}</option>
                     </select>
                 </div>
 
                 <div>
                     <select name="type_service" class="rounded-lg">
-                        <option value="0" data-display=" {{ __('Type of service') }}">
-                            {{ __('Type of service') }}
+                        <option value="0" data-display=" {{ __('front.Type of service') }}">
+                            {{ __('front.Type of service') }}
                         </option>
                         <option value="1"> </option>
                     </select>
@@ -69,15 +60,15 @@
 
             <div>
                 <label for="city"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ __('city') }}</label>
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ __('front.city') }}</label>
                 <input type="text" id="city" name="city"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Flowbite" />
+                    placeholder="{{ __('front.city') }}" />
             </div>
 
             <div class="">
                 <div>
-                    {{ __('price') }}
+                    {{ __('front.price') }}
                 </div>
                 <div class="flex gap-2">
                     <div>
@@ -95,7 +86,7 @@
                             </div>
                             <input name="price_start" type="number" id="currency-input"
                                 class="block p-2.5 w-full z-20 ps-10 text-sm text-gray-900 bg-gray-50 rounded-lg  border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-e-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
-                                placeholder="{{ __('Price start') }}" />
+                                placeholder="{{ __('front.Price start') }}" />
                         </div>
                     </div>
                     <div class="">
@@ -116,7 +107,7 @@
                                 </div>
                                 <input name="price_end" type="number" id="currency-input"
                                     class="block p-2.5 w-full z-20 ps-10 text-sm text-gray-900 bg-gray-50 rounded-lg  border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-e-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
-                                    placeholder="{{ __('Price end') }}" />
+                                    placeholder="{{ __('front.Price end') }}" />
                             </div>
                         </div>
                     </div>
@@ -127,22 +118,22 @@
             <div class="grid gap-6 mb-6 md:grid-cols-2">
                 <div>
                     <label for="first_name"
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ __('name') }}</label>
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ __('front.name') }}</label>
                     <input type="text" id="first_name" name="name"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="{{ __('name') }}" />
+                        placeholder="{{ __('front.name') }}" />
                 </div>
 
                 <div>
                     <label for="company"
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Company</label>
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ __('front.Company') }}</label>
                     <input type="text" id="company" name="company"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Flowbite" />
+                        placeholder="{{ __('front.Riyadh') }}" />
                 </div>
                 <div>
                     <label for="phone"
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ __('phone') }}
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ __('front.phone') }}
                     </label>
                     <input type="tel" id="phone" name="phone"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -153,7 +144,7 @@
 
             <div class="mb-6">
                 <label for="email"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ __('email') }}
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ __('front.email') }}
                 </label>
                 <input name="email" type="email" id="email"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -161,7 +152,7 @@
             </div>
 
             <button id="btn-submit"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{{ __('submit') }}</button>
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{{ __('front.submit') }}</button>
         </form>
 
     </main>
@@ -224,6 +215,7 @@
                 url: "{{ route('form.store') }}",
                 data: data,
                 success: function(response) {
+                    form.find(':input:not(.datepicker):not(.checkbox)').val('');
                     if (response.status) {
                         SwalModal(response.msg, 'success');
                     } else {
@@ -242,7 +234,7 @@
                         title: '{{ __('front.check the input') }}',
                         icon: 'error',
                         confirmButtonColor: '#4ca1af',
-                        confirmButtonText: '{{ __('dash.ok') }}',
+                        confirmButtonText: '{{ __('front.ok') }}',
                     })
                 }
             });

@@ -98,5 +98,60 @@ class SettingSeeder extends Seeder
             "category" => "1",
             "order_by" => "1",
         ]);
+
+        Setting::create([
+            "setting_key" => "youtube",
+            "setting_value" => "11",
+            "title_ar" => "حساب اليوتيوب",
+            "title_en" => "Youtube Account",
+            "type_id" => "1",
+            "category" => "2",
+            "order_by" => "1",
+        ]);
+        Setting::create([
+            "setting_key" => "twitter",
+            "setting_value" => "11",
+            "title_ar" => "حساب التويتر",
+            "title_en" => "Twitter Account",
+            "type_id" => "1",
+            "category" => "2",
+            "order_by" => "1",
+        ]);
+        Setting::create([
+            "setting_key" => "snapchat",
+            "setting_value" => "11",
+            "title_ar" => "حساب السناب شات",
+            "title_en" => "Snap Chat Account",
+            "type_id" => "1",
+            "category" => "2",
+            "order_by" => "1",
+        ]);
+        Setting::create([
+            "setting_key" => "tiktok",
+            "setting_value" => "11",
+            "title_ar" => "حساب التيك توك",
+            "title_en" => "Tik Tok Account",
+            "type_id" => "1",
+            "category" => "2",
+            "order_by" => "1",
+        ]);
+        Setting::create([
+            "setting_key" => "instagram",
+            "setting_value" => "11",
+            "title_ar" => "حساب الإنستغرام",
+            "title_en" => "Instagram Account",
+            "type_id" => "1",
+            "category" => "2",
+            "order_by" => "1",
+        ]);
+        Setting::create([
+            "setting_key" => "email",
+            "setting_value" => "11",
+            "title_ar" => "البريد الإلكتروني",
+            "title_en" => "Email",
+            "type_id" => "1",
+            "category" => "2",
+            "order_by" => "1",
+        ]);
     }
 }

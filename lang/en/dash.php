@@ -2,8 +2,11 @@
 
 return [
     'USERS' => 'Users',
+    'Sign In to Dashboard' => 'Sign In to Dashboard',
     'role_id' => 'Role ID',
     'actions' => 'Actions',
+    'login' => 'Login',
+    'please wait' => 'Please wait',
     'created_at' => 'Created At',
     'users' => 'Users',
     'add' => 'Add',
@@ -13,6 +16,8 @@ return [
     'Basic' => 'Basic',
     'Contact Information' => 'Contact Information',
     'save' => 'Save',
+    'message' => 'show',
+    'delete' => 'delete',
     'cancel' => 'Cancel',
     'profile' => 'Profile',
     'change password' => 'Change Password',

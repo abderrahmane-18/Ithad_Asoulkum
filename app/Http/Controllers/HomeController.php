@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ReservationRequest;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
 
@@ -12,20 +13,8 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function store(Request $request)
+    public function store(ReservationRequest $request)
     {
-        // dd($request->all());
-        $this->validate($request, [
-            'service' => 'required|not_in:0',
-            'type_service' => 'required|not_in:0',
-            'city' => 'required',
-            'price_start' => 'required|numeric',
-            'price_end' => 'required|numeric',
-            'name' => 'nullable',
-            'company' => 'required',
-            'phone' => 'required',
-            'email' => 'required|email',
-        ]);
 
         $data = $request->all();
         $reservation = Reservation::create($data);

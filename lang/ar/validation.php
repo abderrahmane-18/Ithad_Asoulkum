@@ -173,6 +173,12 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+
+        'form' => [
+            'required' => 'هذا الحقل مطلوب',
+            'numeric' => 'يجب أن يكون هذا الحقل رقمًا',
+            'email' => "يجب أن يكون هذا الحقل عنوان بريد إلكتروني صحيح",
+        ],
     ],
 
     /*
