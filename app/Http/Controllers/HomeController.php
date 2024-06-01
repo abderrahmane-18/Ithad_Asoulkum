@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reservation;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -18,19 +19,16 @@ class HomeController extends Controller
             'service' => 'required|not_in:0',
             'type_service' => 'required|not_in:0',
             'city' => 'required',
-            'price_start' => 'required',
-            'price_end' => 'required',
-            'name' => 'required',
+            'price_start' => 'required|numeric',
+            'price_end' => 'required|numeric',
+            'name' => 'nullable',
             'company' => 'required',
             'phone' => 'required',
             'email' => 'required|email',
         ]);
-        if ($request->input('service') == 0) {
-            $status = false;
-            $msg = __('front.service_error');
-            return response()->json(compact('status', 'msg'));
-        }
 
+        $data = $request->all();
+        $reservation = Reservation::create($data);
 
         $status = true;
         $msg = __('front.application_success');

@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+@if (app()->getLocale() == 'ar')
+    <html lang="en" dir="rtl" direction="rtl">
+@else
+    <html lang="ar">
+@endif
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content=" , ,  " />
-    <meta name="title" content="" />
-    <meta name="description" content="" />
+    <meta name="keywords" content="{{ \App\Models\Setting::where('setting_key', 'keywords')->first()->setting_value }}" />
+    <meta name="title"
+        content="{{ \App\Models\Setting::where('setting_key', 'website_name_' . getLocale())->first()->setting_value }}" />
+    <meta name="description"
+        content="{{ \App\Models\Setting::where('setting_key', 'description_' . getLocale())->first()->setting_value }}" />
     <meta name="author" content="Khaldi Mohamed Abdelahmid Esadek (Abdou)" />
     <meta name="copyright" content="https://khaldiabdou.com/" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="shortcut icon" href="images/logo2.jpeg" type="image/x-icon" />
+    <link rel="shortcut icon"
+        href="{{ asset(\App\Models\Setting::where('setting_key', 'favicon')->first()->setting_value) }}" />
 
     <link href="{{ asset('assets/lib/aos.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('assets/lib/nice-select.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/style.css') }}" />
     @vite('resources/css/app.css')
 
-    <title>
-        إتحاد اصولكم
+    <title>{{ \App\Models\Setting::where('setting_key', 'website_name_' . getLocale())->first()->setting_value }}
     </title>
+
 </head>
 
 <body class="p-6">
@@ -52,7 +59,8 @@
 
                 <div>
                     <select name="type_service" class="rounded-lg">
-                        <option value="0" data-display=" {{ __('Type of service') }}"> {{ __('Type of service') }}
+                        <option value="0" data-display=" {{ __('Type of service') }}">
+                            {{ __('Type of service') }}
                         </option>
                         <option value="1"> </option>
                     </select>

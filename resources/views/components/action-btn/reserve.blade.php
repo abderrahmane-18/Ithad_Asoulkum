@@ -9,10 +9,10 @@
         </div>
     </button>
     <div class="modal fade" tabindex="-1" id="message-modal-{{ $record->id }}">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">{{ __('front.Job Application') }}</h5>
+                    {{-- <h5 class="modal-title">{{ __('front.Job Application') }}</h5> --}}
                     <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal"
                         aria-label="Close">
                         <span class="svg-icon svg-icon-2x">
@@ -31,24 +31,24 @@
                         </thead>
                         <tbody class="fw-bold text-gray-800">
                             <tr class="p-4">
-                                <td class="ps-3">{{ __('dash.clients') }}</td>
-                                <td>{{ $record->auth }}</td>
+                                <td class="ps-3">{{ __('dash.service') }}</td>
+                                <td>{{ $record->service }}</td>
                             </tr>
                             <tr class="p-4">
-                                <td class="ps-3">{{ __('front.Choose Location') }}</td>
-                                <td>{{ $record->location }}</td>
+                                <td class="ps-3">{{ __('dash.type_service') }}</td>
+                                <td>{{ $record->type_service }}</td>
                             </tr>
                             <tr class="p-4">
-                                <td class="ps-3">{{ __('front.Choose Hotel') }}</td>
-                                <td>{{ $record->hotel }}</td>
+                                <td class="ps-3">{{ __('dash.city') }}</td>
+                                <td>{{ $record->city }}</td>
                             </tr>
                             <tr class="p-4">
-                                <td class="ps-3">{{ __('front.check in') }}</td>
-                                <td>{{ $record->checkin }}</td>
+                                <td class="ps-3">{{ __('dash.name') }}</td>
+                                <td>{{ $record->name }}</td>
                             </tr>
                             <tr class="p-4">
-                                <td class="ps-3">{{ __('front.check out') }}</td>
-                                <td>{{ $record->checkout }}</td>
+                                <td class="ps-3">{{ __('dash.company') }}</td>
+                                <td>{{ $record->company }}</td>
                             </tr>
                             <tr class="p-4">
                                 <td class="ps-3">{{ __('dash.phone') }}</td>
@@ -57,26 +57,6 @@
                             <tr class="p-4">
                                 <td class="ps-3">{{ __('dash.email') }}</td>
                                 <td>{{ $record->email }}</td>
-                            </tr>
-                            <tr class="p-4">
-                                <td class="ps-3">{{ __('front.Room') }}</td>
-                                <td>{{ $record->room }}</td>
-                            </tr>
-                            <tr class="p-4">
-                                <td class="ps-3">{{ __('front.They need a transfer from the airport?') }}</td>
-                                <td>{{ $record->delivery == '1' ? __('front.Yes') : __('front.No') }} </td>
-                            </tr>
-                            <tr class="p-4">
-                                <td class="ps-3">{{ __('front.Flight No') }}</td>
-                                <td>{{ $record->flight_no }}</td>
-                            </tr>
-                            <tr class="p-4">
-                                <td class="ps-3">{{ __('front.Arrival Time') }}</td>
-                                <td>{{ $record->arrival_time }}</td>
-                            </tr>
-                            <tr class="p-4">
-                                <td class="ps-3">{{ __('dash.number_people') }}</td>
-                                <td>{{ $record->number_people }}</td>
                             </tr>
                         </tbody>
                     </table>
