@@ -34,6 +34,12 @@ return [
     'city' => 'المدينة',
     'message' => 'عرض',
     'delete' => 'حذف',
+    'updated successfully' => 'تم التحديث بنجاح',
+    'ok' => 'حسناً',
+    'enter' => 'أدخل',
+    'created successfully' => 'تم الإنشاء بنجاح',
+    'Allowed image types' => 'أنواع الصور المسموح بها',
+    'main_data' => 'البيانات الرئيسية',
 
     'name' => 'الاسم',
     'company' => 'الشركة',

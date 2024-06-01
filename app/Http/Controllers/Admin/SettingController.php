@@ -35,6 +35,12 @@ class SettingController extends Controller
             'favicon' => 'nullable|max:' . getMaxSize() . '|mimes:' . acceptImageType(0),
             'footer_description_ar' => 'required',
             'footer_description_en' => 'required',
+            'youtube' => 'nullable',
+            'twitter' => 'nullable',
+            'snapchat' => 'nullable',
+            'tiktok' => 'nullable',
+            'instagram' => 'nullable',
+            'email' => 'nullable',
         ]);
 
 
