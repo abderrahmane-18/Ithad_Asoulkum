@@ -40,5 +40,14 @@ class ProjectModelSeeder extends Seeder
             "icon" =>  'fas fa-users-cog',
             "order_by" => '1'
         ]);
+        ProjectModel::create([
+            'parent_id' => '0',
+            'route_key' => 'reservations',
+            'title_ar' => 'الحجوزات',
+            'title_en' => 'Reservations',
+            "is_menu" => '1',
+            "icon" =>  'fa fa-briefcase',
+            "order_by" => '1'
+        ]);
     }
 }

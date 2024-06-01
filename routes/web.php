@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\ReservationController;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [HomeController::class, 'index']);
+Route::post('/store', [HomeController::class, 'store'])->name('form.store');
 
 Route::get('lang/{lang}', [LanguageController::class, 'switchLang'])->name('lang.switchLang');
 
@@ -60,4 +62,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     //settings
     Route::get('/settings', [SettingController::class, 'index'])->name('dashboard.settings.index');
     Route::post('/settings', [SettingController::class, 'update'])->name('dashboard.settings.update');
+
+    //reservation
+    Route::get('reservations', [ReservationController::class, 'index'])->name('dashboard.reservations.index');
+    Route::get('reservations/create', [ReservationController::class, 'create'])->name('dashboard.reservations.create');
+    Route::post('reservations/store', [ReservationController::class, 'store'])->name('dashboard.reservations.store');
+    Route::get('reservations/{obj}/edit', [ReservationController::class, 'edit'])->name('dashboard.reservations.edit');
+    Route::post('reservations/{obj}/update', [ReservationController::class, 'update'])->name('dashboard.reservations.update');
+    Route::delete('reservations/{obj}/delete', [ReservationController::class, 'destroy'])->name('dashboard.reservations.destroy');
 });

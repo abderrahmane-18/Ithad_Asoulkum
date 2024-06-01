@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\ProjectModel;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,9 +15,10 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
-        $this->call(ProjectModelSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(SettingSeeder::class);
+        $this->call(ProjectModelSeeder::class);
+        $this->call(ReservationSeed::class);
 
         // \App\Models\User::factory(10)->create();
 
