@@ -20,5 +20,7 @@ return [
     'check the input' => 'Check the input',
     'Ok got it' => 'Ok got it',
     'application_success' => 'Application Success',
+    'arbic' => 'عربي',
+    'english' => 'English',
 
 ];

@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/store', [HomeController::class, 'store'])->name('form.store');
 
 Route::get('lang/{lang}', [LanguageController::class, 'switchLang'])->name('lang.switchLang');

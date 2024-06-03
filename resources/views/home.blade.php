@@ -20,6 +20,11 @@
     <link rel="shortcut icon"
         href="{{ asset(\App\Models\Setting::where('setting_key', 'favicon')->first()->setting_value) }}" />
 
+    {{-- fonts --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
     <link href="{{ asset('assets/lib/aos.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('assets/lib/nice-select.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/style.css') }}" />
@@ -30,12 +35,69 @@
 
 </head>
 
-<body class="p-6">
+<style>
+    body {
+        scroll-behavior: smooth
+    }
+</style>
+
+<body class="scroll-smooth">
+
+    <nav class="shadow-md">
+        <div class="container w-8/12 mx-auto">
+            <div class="flex justify-between items-center h-[140px]">
+                <div>
+                    <a href="{{ route('home') }}">
+                        <img src="{{ asset(\App\Models\Setting::where('setting_key', 'logo')->first()->setting_value) }}"
+                            alt="logo" class="w-36" />
+                    </a>
+                </div>
+                <div>
+                    <ul class="flex gap-4 items-center ">
+                        <li>
+                            <a href="{{ route('lang.switchLang', 'ar') }}"
+                                class="w-28 h-12 flex items-center justify-center rounded-full font-normal transition duration-300 border border-primary text-secondary hover:bg-primary hover:text-white">
+                                {{ __('front.arbic') }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('lang.switchLang', 'en') }}"
+                                class="w-28 h-12 flex items-center justify-center rounded-full font-normal transition duration-300 border border-primary text-secondary hover:bg-primary hover:text-white">
+                                {{ __('front.english') }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact-us"
+                                class="text-primary font-bold text-lg ms-6 relative  before:absolute before:bottom-[-2px] before:right-0 ltr:before:left-0 before:w-8 before:bg-primary before:h-[2px] before:rounded-lg ">
+                                <span>{{ __('front.contact-us') }}</span>
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
     <!--------------
         Main Content
     --------------->
-    <main>
-        <form class="flex flex-col gap-4 w-8/12 mx-auto" id="data_form">
+    <main class="py-28 relative " style="min-height : calc(100vh - 140px)">
+
+        <div class="absolute inset-0 blur-[1px]  shadow-sm"
+            style="background-image: url('{{ asset('assets/image.png') }}');  background-size:  cover ;">
+            <div class="absolute inset-0 bg-neutral-600 opacity-60 ">
+            </div>
+        </div>
+        {{-- <h1 class=" text-white relative z-20 w-fit mx-auto ">إبـــــــحث لي </h1> --}}
+        <div
+            class="w-8/12 mx-auto text-8xl h-40  relative z-20  font-light text-white tracking-wide uppercase grid grid-cols-[1fr_max-content_1fr] grid-rows-[27px_0] gap-5 items-center before:block before:border-t before:border-b before:border-primary-100 before:h-[10px]  after:block after:border-t after:border-b after:border-primary-100 after:h-[10px] ">
+            إبـــــــحث لـي
+        </div>
+
+        <form class="flex flex-col gap-4 w-8/12 mx-auto relative" id="data_form">
             <div class="flex gap-8">
                 <div>
                     <select class="service" name="service" class="rounded-lg">
@@ -156,13 +218,76 @@
         </form>
 
     </main>
-    <div>
-    </div>
+
     <!--------------
                     Footer
                 --------------->
-    <footer class="footer overflow-hidden" id="contact-us">
+    <footer class style="background: url('{{ asset('assets/lines.svg') }}'); background-color: #d7eff1;"
+        class=" shadow-sm mb-[-30px]  " id="contact-us">
 
+        <div class="container w-8/12 mx-auto">
+            <div class="grid grid-cols-2 gap-16 py-12">
+                <div class="col-span-2 md:col-span-1">
+                    <div>
+                        <a href="{{ route('home') }}" class="w-[24px]">
+                            <img src="{{ asset(\App\Models\Setting::where('setting_key', 'logo')->first()->setting_value) }}"
+                                alt="logo" class="w-36" />
+                        </a>
+                    </div>
+                    <div class="text-neutral-800 flex items-center gap-4 mt-12">
+                        <span class="underline text-secondary">تابعنا :</span>
+                        <div class="flex item-center gap-5">
+                            @php
+                                $youtube = \App\Models\Setting::where('setting_key', 'youtube')->first()->setting_value;
+                                $twitter = \App\Models\Setting::where('setting_key', 'twitter')->first()->setting_value;
+                                $tiktok = \App\Models\Setting::where('setting_key', 'tiktok')->first()->setting_value;
+                                $instagram = \App\Models\Setting::where('setting_key', 'instagram')->first()
+                                    ->setting_value;
+                                $snapchat = \App\Models\Setting::where('setting_key', 'snapchat')->first()
+                                    ->setting_value;
+                            @endphp
+                            @if ($youtube)
+                                <a href="{{ $youtube }}" target="__blanc"
+                                    class="transition duration-300  hover:opacity-40">
+                                    <img src="{{ asset('assets/youtube.svg') }}" alt="youtube" class="w-7 h-7" />
+                                </a>
+                            @endif
+                            <a href="{{ \App\Models\Setting::where('setting_key', 'twitter')->first()->setting_value }} "
+                                target="__blanc" class="transition duration-300  hover:opacity-40">
+                                <img src="{{ asset('assets/twitter.svg') }}" alt="twitter" class="w-7 h-7" />
+                            </a>
+                            <a href="{{ \App\Models\Setting::where('setting_key', 'tiktok')->first()->setting_value }} "
+                                target="__blanc" class="transition duration-300  hover:opacity-40">
+                                <img src="{{ asset('assets/tiktok.svg') }}" alt="tiktok"
+                                    class="w-[1.5rem] h-[1.5rem]" />
+                            </a>
+                            <a href="{{ \App\Models\Setting::where('setting_key', 'instagram')->first()->setting_value }} "
+                                target="__blanc" class="transition duration-300  hover:opacity-40">
+                                <img src="{{ asset('assets/instagram.svg') }}" alt="instagram" class="w-7 h-7" />
+                            </a>
+                            <a href="{{ \App\Models\Setting::where('setting_key', 'snapchat')->first()->setting_value }} "
+                                target="__blanc" class="transition duration-300  hover:opacity-40">
+                                <img src="{{ asset('assets/snapchat.svg') }}" alt="snapchat" class="w-7 h-7" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl mb-8 underline text-secondary    ">معلومات الإتصال</h3>
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="{{ asset('assets/location.svg') }}" alt="" width="16">
+                        <span class="text-neutral-900">الرياض - حي النزهة</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <img src="{{ asset('assets/tel.svg') }}" alt="" width="16">
+                        <span class="text-neutral-900">+966 555 444 555</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-center border  border-t-primary py-6 text-secondary   text-xl">
+            جميع الحقوق محفوظة لشركة أصولكم &copy; <span class="text-primary">2024</span>
+        </div>
     </footer>
 </body>
 <script src="{{ asset('assets/lib/jquery.js') }}"></script>

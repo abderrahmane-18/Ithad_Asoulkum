@@ -21,6 +21,9 @@ return [
     'check the input' => 'تحقق من الإدخال',
     'Ok got it' => 'حسنًا فهمت',
     'application_success' => 'تم تقديم الطلب بنجاح',
+    'arbic' => 'عربي',
+    'english' => 'English',
+    'contact-us' => 'إتصل بنــا',
 
 
 ];

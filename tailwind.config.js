@@ -9,8 +9,13 @@ export default {
     ],
     theme: {
         extend: {
+            colors: {
+                primary: "#7bcbc2",
+                secondary: "#104a7c",
+                "primary-100": "#d7eff1",
+            },
             fontFamily: {
-                // sans: ["Cairo", ...defaultTheme.fontFamily.sans],
+                sans: ["Cairo", ...defaultTheme.fontFamily.sans],
             },
         },
     },
