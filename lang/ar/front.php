@@ -24,6 +24,9 @@ return [
     'arbic' => 'عربي',
     'english' => 'English',
     'contact-us' => 'إتصل بنــا',
-
+    'copy_right' => 'جميع الحقوق محفوظة لشركة أصولكم &copy; <span class="text-primary">2024</span>',
+    'follow_us' => 'تابعــنا',
+    'contact info' => 'معلومات الإتصال',
+    'title' => 'إبـــــــحث لـي',
 
 ];

@@ -68,7 +68,7 @@
                         </li>
                         <li>
                             <a href="#contact-us"
-                                class="text-primary font-bold text-lg ms-6 relative  before:absolute before:bottom-[-2px] before:right-0 ltr:before:left-0 before:w-8 before:bg-primary before:h-[2px] before:rounded-lg ">
+                                class="text-primary font-bold text-lg ms-6 relative  before:absolute before:bottom-[-2px] {{ app()->getLocale() == 'ar' ? 'before:right-0' : 'before:left-0' }} before:w-8 before:bg-primary before:h-[2px] before:rounded-lg ">
                                 <span>{{ __('front.contact-us') }}</span>
 
                             </a>
@@ -84,17 +84,16 @@
     <!--------------
         Main Content
     --------------->
-    <main class="py-28 relative " style="min-height : calc(100vh - 140px)">
+    <main class="py-28 relative min-h-[800px]">
 
-        <div class="absolute inset-0 blur-[1px]  shadow-sm"
-            style="background-image: url('{{ asset('assets/image.png') }}');  background-size:  cover ;">
-            <div class="absolute inset-0 bg-neutral-600 opacity-60 ">
+        <div class="absolute inset-0   shadow-sm"
+            style="background-image: url('{{ asset('assets/one.avif') }}');  background-size: cover ;background-position: center">
+            <div class="absolute inset-0 bg-secondary opacity-50 ">
             </div>
         </div>
-        {{-- <h1 class=" text-white relative z-20 w-fit mx-auto ">إبـــــــحث لي </h1> --}}
         <div
             class="w-8/12 mx-auto text-8xl h-40  relative z-20  font-light text-white tracking-wide uppercase grid grid-cols-[1fr_max-content_1fr] grid-rows-[27px_0] gap-5 items-center before:block before:border-t before:border-b before:border-primary-100 before:h-[10px]  after:block after:border-t after:border-b after:border-primary-100 after:h-[10px] ">
-            إبـــــــحث لـي
+            {{ __('front.title') }}
         </div>
 
         <form class="flex flex-col gap-4 w-8/12 mx-auto relative" id="data_form">
@@ -234,8 +233,8 @@
                                 alt="logo" class="w-36" />
                         </a>
                     </div>
-                    <div class="text-neutral-800 flex items-center gap-4 mt-12">
-                        <span class="underline text-secondary">تابعنا :</span>
+                    <div class="text-neutral-800 flex items-center gap-4 mt-16">
+                        <span class="underline text-secondary">{{ __('front.follow_us') }} :</span>
                         <div class="flex item-center gap-5">
                             @php
                                 $youtube = \App\Models\Setting::where('setting_key', 'youtube')->first()->setting_value;
@@ -273,20 +272,28 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-xl mb-8 underline text-secondary    ">معلومات الإتصال</h3>
-                    <div class="flex items-center gap-4 mb-4">
+                    <h3 class="text-xl mb-6 underline text-secondary    ">{{ __('front.contact info') }}</h3>
+                    <div class="flex items-center gap-4 mb-2">
                         <img src="{{ asset('assets/location.svg') }}" alt="" width="16">
-                        <span class="text-neutral-900">الرياض - حي النزهة</span>
+                        <span
+                            class="text-neutral-900">{{ \App\Models\Setting::where('setting_key', 'address')->first()->setting_value }}</span>
                     </div>
-                    <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-4 mb-2">
                         <img src="{{ asset('assets/tel.svg') }}" alt="" width="16">
-                        <span class="text-neutral-900">+966 555 444 555</span>
+                        <span
+                            class="text-neutral-900">{{ \App\Models\Setting::where('setting_key', 'telephone')->first()->setting_value }}</span>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <img src="{{ asset('assets/email.svg') }}" alt="" width="16">
+                        <span
+                            class="text-neutral-900">{{ \App\Models\Setting::where('setting_key', 'email')->first()->setting_value }}</span>
                     </div>
                 </div>
             </div>
         </div>
         <div class="flex items-center justify-center border  border-t-primary py-6 text-secondary   text-xl">
-            جميع الحقوق محفوظة لشركة أصولكم &copy; <span class="text-primary">2024</span>
+            {!! __('front.copy_right') !!}
         </div>
     </footer>
 </body>

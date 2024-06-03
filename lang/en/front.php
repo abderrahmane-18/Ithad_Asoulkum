@@ -22,5 +22,9 @@ return [
     'application_success' => 'Application Success',
     'arbic' => 'عربي',
     'english' => 'English',
-
+    'copy_right' => 'All rights reserved to Asoulkum Company &copy; <span class="text-primary">2024</span>',
+    'follow_us' => 'Follow us',
+    'contact info' => 'Contact Information',
+    'title' => 'Search for me',
+    "contact-us" => "Contact us",
 ];

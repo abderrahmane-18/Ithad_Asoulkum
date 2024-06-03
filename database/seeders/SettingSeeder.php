@@ -99,6 +99,40 @@ class SettingSeeder extends Seeder
             "order_by" => "1",
         ]);
 
+
+
+        Setting::create([
+            "setting_key" => "address",
+            "setting_value" => "11",
+            "title_ar" => "العنوان",
+            "title_en" => "Address",
+            "type_id" => "1",
+            "category" => "2",
+            "order_by" => "1",
+        ]);
+
+
+        Setting::create([
+            "setting_key" => "telephone",
+            "setting_value" => "11",
+            "title_ar" => "رقم الهاتف",
+            "title_en" => "Telephone",
+            "type_id" => "1",
+            "category" => "2",
+            "order_by" => "1",
+        ]);
+        Setting::create([
+            "setting_key" => "email",
+            "setting_value" => "11",
+            "title_ar" => "البريد الإلكتروني",
+            "title_en" => "Email",
+            "type_id" => "1",
+            "category" => "2",
+            "order_by" => "1",
+        ]);
+
+
+
         Setting::create([
             "setting_key" => "youtube",
             "setting_value" => "11",
