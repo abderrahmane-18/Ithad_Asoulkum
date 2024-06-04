@@ -105,9 +105,10 @@
                             <option value="0" data-display="{{ __('front.Choose services') }}">
                                 {{ __('front.Choose services') }}
                             </option>
-                            <option value="buy">{{ __('front.Buy') }}</option>
-                            <option value="rent">{{ __('front.Rent') }}</option>
-                            <option value="investment">{{ __('front.Investment opportunity') }}</option>
+                            <option value="{{ __('front.Buy') }}">{{ __('front.Buy') }}</option>
+                            <option value="{{ __('front.Rent') }}">{{ __('front.Rent') }}</option>
+                            <option value="{{ __('front.Investment opportunity') }}">
+                                {{ __('front.Investment opportunity') }}</option>
                         </select>
                     </div>
                     <div class="text-4xl font-extralight border-xl  text-neutral-500 relative z-20 flex mt-[-2px]">|
