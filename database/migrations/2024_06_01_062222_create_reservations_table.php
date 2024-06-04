@@ -16,8 +16,9 @@ return new class extends Migration
             $table->string('service');
             $table->string('type_service');
             $table->string('city');
-            $table->decimal('price_start', 8);
-            $table->decimal('price_end', 8);
+            $table->decimal('price_start', 40);
+            $table->decimal('price_end', 40);
+            $table->integer('type_mony');
             $table->string('name')->nullable();
             $table->string('phone');
             $table->string('email');

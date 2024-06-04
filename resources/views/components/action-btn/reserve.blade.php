@@ -43,6 +43,27 @@
                                 <td>{{ $record->city }}</td>
                             </tr>
                             <tr class="p-4">
+                                <td class="ps-3">{{ __('front.rang_price') }}</td>
+
+                                <td>{{ __('front.Price start') }} {{ $record->price_start }}
+                                    @if ($record->type_mony == 1)
+                                        {{ __('front.dollar') }}
+                                    @elseif($record->type_mony == 2)
+                                        {{ __('front.riyal') }}
+                                    @else
+                                        {{ __('front.dirham') }}
+                                    @endif
+                                    {{ __('front.Price end') }} {{ $record->price_end }}
+                                    @if ($record->type_mony == 1)
+                                        {{ __('front.dollar') }}
+                                    @elseif($record->type_mony == 2)
+                                        {{ __('front.riyal') }}
+                                    @else
+                                        {{ __('front.dirham') }}
+                                    @endif
+                                </td>
+                            </tr>
+                            <tr class="p-4">
                                 <td class="ps-3">{{ __('dash.name') }}</td>
                                 <td>{{ $record->name }}</td>
                             </tr>

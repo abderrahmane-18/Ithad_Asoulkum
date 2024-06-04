@@ -27,8 +27,10 @@ class ReservationRequest extends FormRequest
             'city' => 'required',
             'price_start' => 'required|numeric',
             'price_end' => 'required|numeric',
+            'type_mony' => 'required|not_in:0',
             'name' => 'nullable',
-            'phone' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required|numeric',
             'email' => 'required|email',
         ];
     }
@@ -41,7 +43,10 @@ class ReservationRequest extends FormRequest
             'city.required' => __('validation.custom.form.required'),
             'price_start.required' => __('validation.custom.form.required'),
             'price_end.required' => __('validation.custom.form.required'),
+            'type_mony.required' => __('validation.custom.form.required'),
+            'type_mony.not_in' => __('validation.custom.form.required'),
             'phone.required' => __('validation.custom.form.required'),
+            'phone.regex' => __('validation.custom.form.regex'),
             'email.required' => __('validation.custom.form.required'),
             'email.email' => __('validation.custom.form.email'),
             'service.not_in' => __('validation.custom.form.required'),

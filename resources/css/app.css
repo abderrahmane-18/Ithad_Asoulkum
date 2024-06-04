@@ -69,3 +69,11 @@ body {
 .nice-select:after {
     border-color: rgb(66, 66, 66);
 }
+.nice-select .list {
+    z-index: 100 !important;
+}
+.type_mony .nice-select {
+    height: 76px;
+    padding-block: 16px;
+    border-radius: 12px;
+}

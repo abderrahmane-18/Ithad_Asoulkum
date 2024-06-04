@@ -27,7 +27,6 @@
 
     <link href="{{ asset('assets/lib/aos.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('assets/lib/nice-select.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/style.css') }}" />
     @vite('resources/css/app.css')
 
     <title>{{ \App\Models\Setting::where('setting_key', 'website_name_' . getLocale())->first()->setting_value }}
@@ -113,13 +112,13 @@
                     </div>
                     <div class="text-4xl font-extralight border-xl  text-neutral-500 relative z-20 flex mt-[-2px]">|
                     </div>
-                    <div class="flex   flex-col items-center gap-1  relative">
+                    <div class=" div_type_service flex flex-col items-center gap-1  relative">
                         <select name="type_service"
                             class="rounded-lg service bg-transparent border border-none text-neutral-600 font-bold">
                             <option value="0" data-display=" {{ __('front.Type of service') }}">
                                 {{ __('front.Type of service') }}
                             </option>
-                            <option disabled> يمكن تحديد نوع بعد إختبار الخدمة</option>
+                            <option disabled>{{ __('front.info') }}</option>
                         </select>
                     </div>
                     <div class="text-4xl font-extralight border-xl  text-neutral-500 relative z-20 flex mt-[-2px]">|
@@ -133,10 +132,10 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-2 items-center gap-28">
-                <div class=" flex items-center gap-12">
+            <div class="grid grid-cols-3 items-center gap-28">
+                <div class=" flex items-center col-span-3 gap-12">
                     <div class="text-3xl text-white font-light">
-                        {{ __('front.Price start') }}
+                        {{ __('front.rang_price') }}
                     </div>
                     <div class="flex-1">
                         <label for="currency-input"
@@ -155,11 +154,6 @@
                                 class="block p-2.5 py-6 text-lg focus:outline-0 border-neutral-500 w-full z-20 ps-14  text-gray-900 bg-gray-50 rounded-xl  border "
                                 placeholder="{{ __('front.Price start') }}" />
                         </div>
-                    </div>
-                </div>
-                <div class="flex items-center gap-16">
-                    <div class="text-3xl text-white font-light">
-                        {{ __('front.Price end') }}
                     </div>
                     <div class="flex-1">
                         <label for="currency-input"
@@ -184,6 +178,16 @@
                             </div>
                         </div>
                     </div>
+                    <div class="type_mony ">
+                        <select name="type_mony" id="type_mony">
+                            <option value="0" data-display=" {{ __('front.type_mony') }}" disabled>
+                                {{ __('front.type_mony') }}
+                            </option>
+                            <option value="1">{{ __('front.dollar') }} </option>
+                            <option value="2 ">{{ __('front.riyal') }} </option>
+                            <option value="3">{{ __('front.dirham') }} </option>
+                        </select>
+                    </div>
                 </div>
 
             </div>
@@ -200,9 +204,9 @@
                 </div>
 
                 <div class="relative z-20 w-[25%]">
-                    <input type="text" id="phone" name="phone"
+                    <input type="tel" id="phone" name="phone"
                         class="bg-transparent placeholder:text-start border-none placeholder:font-bold  focus:outline-none focus:border-none placeholder:text-neutral-600  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="123-45-678" />
+                        placeholder="+966 xx xxx xxxx" />
                 </div>
                 <div class="text-4xl font-extralight border-xl  text-neutral-500 relative z-20 flex mt-[-2px]">|
                 </div>
@@ -210,7 +214,7 @@
                 <div class="relative z-20 w-[25%]">
                     <input name="email" type="text" id="email"
                         class="bg-transparent border-none placeholder:font-bold  focus:outline-none focus:border-none placeholder:text-neutral-600  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="test@gmail.com" />
+                        placeholder="odsolcom@odsolcom.com" />
                 </div>
             </div>
 
@@ -316,7 +320,7 @@
             text: text,
             icon: type,
             confirmButtonText: '{{ __('front.Ok got it') }}',
-            confirmButtonColor: '#4ca1af',
+            confirmButtonColor: '#7bcbc2',
             customClass: {
                 title: "Nexa-Thin",
                 content: 'Nexa-Thin',
@@ -329,6 +333,57 @@
     };
 
     $(document).ready(function() {
+        let type_service = {
+            buy: [
+                "{{ __('front.land') }}",
+                "{{ __('front.palace') }}",
+                "{{ __('front.resort') }}",
+                "{{ __('front.building') }}",
+                "{{ __('front.villa') }}",
+                "{{ __('front.duplex') }}",
+                "{{ __('front.apartment') }}",
+                "{{ __('front.retreat') }}",
+                "{{ __('front.chalet') }}",
+                "{{ __('front.farm') }}",
+                "{{ __('front.yard') }}"
+            ],
+            rent: [
+                "{{ __('front.land') }}",
+                "{{ __('front.palace') }}",
+                "{{ __('front.resort') }}",
+                "{{ __('front.building') }}",
+                "{{ __('front.villa') }}",
+                "{{ __('front.duplex') }}",
+                "{{ __('front.apartment') }}",
+                "{{ __('front.retreat') }}",
+                "{{ __('front.chalet') }}",
+                "{{ __('front.farm') }}",
+                "{{ __('front.yard') }}"
+            ],
+            investment: [
+                "{{ __('front.land') }}",
+                "{{ __('front.auction') }}",
+                "{{ __('front.tower') }}",
+                "{{ __('front.development_project') }}",
+                "{{ __('front.partnership') }}",
+                "{{ __('front.other') }}"
+            ],
+        }
+
+        $('.service').on('change', function() {
+            let service = $('.service').val();
+            $('select[name="type_service"]').empty();
+            $('.div_type_service .list').empty();
+            $.each(type_service[service], function(index, value) {
+                $('select[name="type_service"]').append('<option value="' + value + '">' +
+                    value +
+                    '</option>');
+                $('.div_type_service .list').append(
+                    `<li data-value="${value}"  class="option selected">${value}</li>`
+                )
+            });
+        })
+
         $('#data_form').submit(function(e) {
             e.preventDefault();
             let form = $(this);
@@ -339,6 +394,7 @@
                 city: $('#city').val(),
                 price_start: $('#currency-input').val(),
                 price_end: $('#currency-input').val(),
+                type_mony: $('#type_mony').val(),
                 name: $('#first_name').val(),
                 company: $('#company').val(),
                 phone: $('#phone').val(),
