@@ -335,7 +335,8 @@
 
     $(document).ready(function() {
         let type_service = {
-            buy: [
+
+            "{{ __('front.Buy') }}": [
                 "{{ __('front.land') }}",
                 "{{ __('front.palace') }}",
                 "{{ __('front.resort') }}",
@@ -348,7 +349,7 @@
                 "{{ __('front.farm') }}",
                 "{{ __('front.yard') }}"
             ],
-            rent: [
+            "{{ __('front.Rent') }}": [
                 "{{ __('front.land') }}",
                 "{{ __('front.palace') }}",
                 "{{ __('front.resort') }}",
@@ -361,7 +362,7 @@
                 "{{ __('front.farm') }}",
                 "{{ __('front.yard') }}"
             ],
-            investment: [
+            "{{ __('front.Investment opportunity') }}": [
                 "{{ __('front.land') }}",
                 "{{ __('front.auction') }}",
                 "{{ __('front.tower') }}",
