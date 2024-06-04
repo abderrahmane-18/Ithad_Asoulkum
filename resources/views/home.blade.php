@@ -35,17 +35,13 @@
 
 </head>
 
-<style>
-    body {
-        scroll-behavior: smooth
-    }
-</style>
 
-<body class="scroll-smooth">
+
+<body class="scroll-smooth {{ app()->getLocale() == 'ar' ? 'ar' : 'en' }}">
 
     <nav class="shadow-md">
         <div class="container w-8/12 mx-auto">
-            <div class="flex justify-between items-center h-[140px]">
+            <div class="flex justify-between items-center h-[130px]">
                 <div>
                     <a href="{{ route('home') }}">
                         <img src="{{ asset(\App\Models\Setting::where('setting_key', 'logo')->first()->setting_value) }}"
@@ -56,13 +52,13 @@
                     <ul class="flex gap-4 items-center ">
                         <li>
                             <a href="{{ route('lang.switchLang', 'ar') }}"
-                                class="w-28 h-12 flex items-center justify-center rounded-full font-normal transition duration-300 border border-primary text-secondary hover:bg-primary hover:text-white">
+                                class="w-28 h-12 flex items-center justify-center rounded-xl font-normal transition duration-300 border border-primary text-secondary hover:bg-primary hover:text-white">
                                 {{ __('front.arbic') }}
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('lang.switchLang', 'en') }}"
-                                class="w-28 h-12 flex items-center justify-center rounded-full font-normal transition duration-300 border border-primary text-secondary hover:bg-primary hover:text-white">
+                                class="w-28 h-12 flex items-center justify-center rounded-xl font-normal transition duration-300 border border-primary text-secondary hover:bg-primary hover:text-white">
                                 {{ __('front.english') }}
                             </a>
                         </li>
@@ -84,57 +80,67 @@
     <!--------------
         Main Content
     --------------->
-    <main class="py-28 relative min-h-[800px]">
+    <main class="py-32 relative min-h-[800px]">
 
         <div class="absolute inset-0   shadow-sm"
-            style="background-image: url('{{ asset('assets/one.avif') }}');  background-size: cover ;background-position: center">
-            <div class="absolute inset-0 bg-secondary opacity-50 ">
+            style="background-image: url('{{ asset('assets/image.png') }}');background-size: cover;background-position: center;background-repeat: no-repeat;">
+            <div class="absolute inset-0 bg-secondary opacity-60 ">
             </div>
         </div>
-        <div
-            class="w-8/12 mx-auto text-8xl h-40  relative z-20  font-light text-white tracking-wide uppercase grid grid-cols-[1fr_max-content_1fr] grid-rows-[27px_0] gap-5 items-center before:block before:border-t before:border-b before:border-primary-100 before:h-[10px]  after:block after:border-t after:border-b after:border-primary-100 after:h-[10px] ">
-            {{ __('front.title') }}
-        </div>
+        <h1
+            class="header w-fit mx-auto text-7xl text-white relative z-20 font-light mb-36 flex items-center justify-center gap-6">
+            <span>
+                <img src="{{ asset('assets/search.svg') }}" width="52" alt="">
+            </span>
+            <span>
+                {{ __('front.title') }}
+            </span>
+        </h1>
+        <form class="flex flex-col gap-24 w-8/12 mx-auto relative" id="data_form">
+            <div
+                class="w-12/12 relative before:bg-white   before:rounded-2xl before:opacity-100 before:w-full  before:absolute before:inset-0">
+                <div class="flex gap-20 px-12 py-6 ">
+                    <div class="flex flex-col items-center  gap-1  relative">
+                        <select name="service"
+                            class="rounded-lg service bg-transparent border border-none text-neutral-600 font-bold">
+                            <option value="0" data-display="{{ __('front.Choose services') }}">
+                                {{ __('front.Choose services') }}
+                            </option>
+                            <option value="buy">{{ __('front.Buy') }}</option>
+                            <option value="rent">{{ __('front.Rent') }}</option>
+                            <option value="investment">{{ __('front.Investment opportunity') }}</option>
+                        </select>
+                    </div>
+                    <div class="text-4xl font-extralight border-xl  text-neutral-500 relative z-20 flex mt-[-2px]">|
+                    </div>
+                    <div class="flex   flex-col items-center gap-1  relative">
+                        <select name="type_service"
+                            class="rounded-lg service bg-transparent border border-none text-neutral-600 font-bold">
+                            <option value="0" data-display=" {{ __('front.Type of service') }}">
+                                {{ __('front.Type of service') }}
+                            </option>
+                            <option disabled> يمكن تحديد نوع بعد إختبار الخدمة</option>
+                        </select>
+                    </div>
+                    <div class="text-4xl font-extralight border-xl  text-neutral-500 relative z-20 flex mt-[-2px]">|
+                    </div>
 
-        <form class="flex flex-col gap-4 w-8/12 mx-auto relative" id="data_form">
-            <div class="flex gap-8">
-                <div>
-                    <select class="service" name="service" class="rounded-lg">
-                        <option value="0" data-display="{{ __('front.Choose services') }}">
-                            {{ __('front.Choose services') }}
-                        </option>
-                        <option value="buy">{{ __('front.Buy') }}</option>
-                        <option value="rent">{{ __('front.Rent') }}</option>
-                        <option value="investment">{{ __('front.Investment opportunity') }}</option>
-                    </select>
-                </div>
-
-                <div>
-                    <select name="type_service" class="rounded-lg">
-                        <option value="0" data-display=" {{ __('front.Type of service') }}">
-                            {{ __('front.Type of service') }}
-                        </option>
-                        <option value="1"> </option>
-                    </select>
+                    <div class=" flex-1 relative z-20">
+                        <input type="text" id="city" name="city"
+                            class="bg-transparent border-none placeholder:font-bold  focus:outline-none focus:border-none placeholder:text-neutral-600  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="{{ __('front.city') }}" />
+                    </div>
                 </div>
             </div>
 
-            <div>
-                <label for="city"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ __('front.city') }}</label>
-                <input type="text" id="city" name="city"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="{{ __('front.city') }}" />
-            </div>
-
-            <div class="">
-                <div>
-                    {{ __('front.price') }}
-                </div>
-                <div class="flex gap-2">
-                    <div>
+            <div class="grid grid-cols-2 items-center gap-28">
+                <div class=" flex items-center gap-12">
+                    <div class="text-3xl text-white font-light">
+                        {{ __('front.Price start') }}
+                    </div>
+                    <div class="flex-1">
                         <label for="currency-input"
-                            class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
+                            class="mb-2 text-lg font-medium text-gray-900 sr-only dark:text-white">
                         </label>
                         <div class="relative w-full">
                             <div class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none">
@@ -146,11 +152,16 @@
                                 </svg>
                             </div>
                             <input name="price_start" type="number" id="currency-input"
-                                class="block p-2.5 w-full z-20 ps-10 text-sm text-gray-900 bg-gray-50 rounded-lg  border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-e-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+                                class="block p-2.5 py-6 text-lg focus:outline-0 border-neutral-500 w-full z-20 ps-14  text-gray-900 bg-gray-50 rounded-xl  border "
                                 placeholder="{{ __('front.Price start') }}" />
                         </div>
                     </div>
-                    <div class="">
+                </div>
+                <div class="flex items-center gap-16">
+                    <div class="text-3xl text-white font-light">
+                        {{ __('front.Price end') }}
+                    </div>
+                    <div class="flex-1">
                         <label for="currency-input"
                             class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
                             test
@@ -166,51 +177,43 @@
                                             d="M5 2a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1M2 5h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm8 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
                                     </svg>
                                 </div>
-                                <input name="price_end" type="number" id="currency-input"
-                                    class="block p-2.5 w-full z-20 ps-10 text-sm text-gray-900 bg-gray-50 rounded-lg  border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-e-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+                                <input name="price_start" type="number" id="currency-input"
+                                    class="block p-2.5 py-6 text-lg focus:outline-0 border-neutral-500 w-full z-20 ps-14  text-gray-900 bg-gray-50  rounded-xl  border "
                                     placeholder="{{ __('front.Price end') }}" />
+
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
 
-            <div class="grid gap-6 mb-6 md:grid-cols-2">
-                <div>
-                    <label for="first_name"
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ __('front.name') }}</label>
+            <div
+                class="flex  gap-20 px-12 py-6  mb-6  w-12/12 relative before:bg-white   before:rounded-2xl before:opacity-100 before:w-full  before:absolute before:inset-0">
+                <div class="relative z-20 w-[25%]">
                     <input type="text" id="first_name" name="name"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        class="bg-transparent border-none placeholder:font-bold  focus:outline-none focus:border-none placeholder:text-neutral-600  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                         placeholder="{{ __('front.name') }}" />
                 </div>
-
-                <div>
-                    <label for="company"
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ __('front.Company') }}</label>
-                    <input type="text" id="company" name="company"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="{{ __('front.Riyadh') }}" />
+                <div class="text-4xl font-extralight border-xl  text-neutral-500 relative z-20 flex mt-[-2px]">|
                 </div>
-                <div>
-                    <label for="phone"
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ __('front.phone') }}
-                    </label>
-                    <input type="tel" id="phone" name="phone"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+
+                <div class="relative z-20 w-[25%]">
+                    <input type="text" id="phone" name="phone"
+                        class="bg-transparent placeholder:text-start border-none placeholder:font-bold  focus:outline-none focus:border-none placeholder:text-neutral-600  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                         placeholder="123-45-678" />
                 </div>
+                <div class="text-4xl font-extralight border-xl  text-neutral-500 relative z-20 flex mt-[-2px]">|
+                </div>
 
+                <div class="relative z-20 w-[25%]">
+                    <input name="text" type="email" id="email"
+                        class="bg-transparent border-none placeholder:font-bold  focus:outline-none focus:border-none placeholder:text-neutral-600  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                        placeholder="test@gmail.com" />
+                </div>
             </div>
 
-            <div class="mb-6">
-                <label for="email"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ __('front.email') }}
-                </label>
-                <input name="email" type="email" id="email"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="test@gmail.com" />
-            </div>
 
             <button id="btn-submit"
                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{{ __('front.submit') }}</button>
@@ -228,10 +231,13 @@
             <div class="grid grid-cols-2 gap-16 py-12">
                 <div class="col-span-2 md:col-span-1">
                     <div>
-                        <a href="{{ route('home') }}" class="w-[24px]">
-                            <img src="{{ asset(\App\Models\Setting::where('setting_key', 'logo')->first()->setting_value) }}"
-                                alt="logo" class="w-36" />
-                        </a>
+                        <div class="w-fit">
+
+                            <a href="{{ route('home') }}">
+                                <img src="{{ asset(\App\Models\Setting::where('setting_key', 'logo')->first()->setting_value) }}"
+                                    alt="logo" class="w-36" />
+                            </a>
+                        </div>
                     </div>
                     <div class="text-neutral-800 flex items-center gap-4 mt-16">
                         <span class="underline text-secondary">{{ __('front.follow_us') }} :</span>

@@ -91,7 +91,7 @@ class SettingSeeder extends Seeder
         ]);
         Setting::create([
             "setting_key" => "logo",
-            "setting_value" => "assets/images/logo3.jpeg",
+            "setting_value" => "assets/images/logo.png",
             "title_ar" => "شعار الموقع",
             "title_en" => "logo",
             "type_id" => "2",

@@ -5,7 +5,7 @@ return [
     'Rent' => 'Rent',
     'Investment opportunity' => 'Investment opportunity',
     'Type of service' => 'Type of service',
-    'Choose services' => 'Choose services',
+    'Choose services' => 'Choose service',
     'city' => 'city',
     'price' => 'price',
     'Price end' => 'Price end',

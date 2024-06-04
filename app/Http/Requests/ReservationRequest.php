@@ -28,7 +28,6 @@ class ReservationRequest extends FormRequest
             'price_start' => 'required|numeric',
             'price_end' => 'required|numeric',
             'name' => 'nullable',
-            'company' => 'required',
             'phone' => 'required',
             'email' => 'required|email',
         ];
@@ -42,7 +41,6 @@ class ReservationRequest extends FormRequest
             'city.required' => __('validation.custom.form.required'),
             'price_start.required' => __('validation.custom.form.required'),
             'price_end.required' => __('validation.custom.form.required'),
-            'company.required' => __('validation.custom.form.required'),
             'phone.required' => __('validation.custom.form.required'),
             'email.required' => __('validation.custom.form.required'),
             'email.email' => __('validation.custom.form.email'),

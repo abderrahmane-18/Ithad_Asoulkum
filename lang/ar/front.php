@@ -2,11 +2,11 @@
 
 return [
 
-    'Buy' => 'شراء',
-    'Rent' => 'ايجار',
-    'Investment opportunity' => 'فرصة استثمار',
+    'Buy' => 'شـراء',
+    'Rent' => 'ايـجار',
+    'Investment opportunity' => 'فــرصة استثمـار',
     'Type of service' => 'نوع الخدمة',
-    'Choose services' => 'اختر الخدمات',
+    'Choose services' => 'اختر الخدمة',
     'city' => 'المدينة',
     'price' => 'السعر',
     'Price end' => 'نهاية السعر',

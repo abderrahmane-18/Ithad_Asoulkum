@@ -19,7 +19,6 @@ return new class extends Migration
             $table->decimal('price_start', 8);
             $table->decimal('price_end', 8);
             $table->string('name')->nullable();
-            $table->string('company');
             $table->string('phone');
             $table->string('email');
             $table->timestamps();

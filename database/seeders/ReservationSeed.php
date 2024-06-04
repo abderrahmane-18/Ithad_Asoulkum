@@ -20,7 +20,6 @@ class ReservationSeed extends Seeder
             'price_start' => 100,
             'price_end' => 200,
             'name' => 'Name 1',
-            'company' => 'Company 1',
             'phone' => 'Phone 1',
             'email' => 'Email 1',
         ]);

@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    body {
-        font-family: "Cairo", sans-serif;
-    }
+body {
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -25,4 +23,49 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #5baaa1;
+}
+
+.header::before,
+.header::after {
+    content: "";
+    width: calc(50% + 60px);
+    height: calc(100% + 100px);
+    position: absolute;
+    border-start-start-radius: 16px;
+    border-end-end-radius: 16px;
+}
+
+.header::after {
+    border-block-start: 1px solid white;
+    border-inline-start: 1px solid white;
+    right: -40px;
+    top: -50px;
+}
+
+.header::before {
+    border-block-end: 1px solid white;
+    border-inline-end: 1px solid white;
+    left: -80px;
+    bottom: -50px;
+}
+.en main .header::after {
+    left: -40px;
+    right: auto;
+}
+.en main .header::before {
+    left: auto;
+    right: -80px;
+}
+.ar .nice-select:after {
+    right: auto;
+    left: 12px;
+}
+.ar .nice-select,
+.ar .nice-select .option {
+    padding-right: 28px;
+    padding-left: 160px;
+    text-align: start;
+}
+.nice-select:after {
+    border-color: rgb(66, 66, 66);
 }
