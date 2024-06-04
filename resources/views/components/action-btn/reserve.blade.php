@@ -46,10 +46,10 @@
                                 <td class="ps-3">{{ __('dash.name') }}</td>
                                 <td>{{ $record->name }}</td>
                             </tr>
-                            <tr class="p-4">
+                            {{-- <tr class="p-4">
                                 <td class="ps-3">{{ __('dash.company') }}</td>
                                 <td>{{ $record->company }}</td>
-                            </tr>
+                            </tr> --}}
                             <tr class="p-4">
                                 <td class="ps-3">{{ __('dash.phone') }}</td>
                                 <td>{{ $record->phone }}</td>

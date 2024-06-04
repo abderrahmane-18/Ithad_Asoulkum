@@ -88,9 +88,9 @@
             </div>
         </div>
         <h1
-            class="header w-fit mx-auto text-7xl text-white relative z-20 font-light mb-36 flex items-center justify-center gap-6">
+            class="header w-fit mx-auto text-6xl text-white relative z-20 font-light mb-36 flex items-center justify-center gap-6">
             <span>
-                <img src="{{ asset('assets/search.svg') }}" width="52" alt="">
+                <img src="{{ asset('assets/search.svg') }}" width="48" alt="">
             </span>
             <span>
                 {{ __('front.title') }}
@@ -190,7 +190,7 @@
 
 
             <div
-                class="flex  gap-20 px-12 py-6  mb-6  w-12/12 relative before:bg-white   before:rounded-2xl before:opacity-100 before:w-full  before:absolute before:inset-0">
+                class="flex  gap-20 px-12 py-6    w-12/12 relative before:bg-white   before:rounded-2xl before:opacity-100 before:w-full  before:absolute before:inset-0">
                 <div class="relative z-20 w-[25%]">
                     <input type="text" id="first_name" name="name"
                         class="bg-transparent border-none placeholder:font-bold  focus:outline-none focus:border-none placeholder:text-neutral-600  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
@@ -208,7 +208,7 @@
                 </div>
 
                 <div class="relative z-20 w-[25%]">
-                    <input name="text" type="email" id="email"
+                    <input name="email" type="text" id="email"
                         class="bg-transparent border-none placeholder:font-bold  focus:outline-none focus:border-none placeholder:text-neutral-600  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                         placeholder="test@gmail.com" />
                 </div>
@@ -216,7 +216,7 @@
 
 
             <button id="btn-submit"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{{ __('front.submit') }}</button>
+                class=" h-14 flex items-center justify-center rounded-xl text-xl transition duration-300 border border-primary bg-primary text-white hover:bg-transparent hover:text-primary">{{ __('front.submit') }}</button>
         </form>
 
     </main>

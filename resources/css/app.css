@@ -45,7 +45,7 @@ body {
 .header::before {
     border-block-end: 1px solid white;
     border-inline-end: 1px solid white;
-    left: -80px;
+    left: -60px;
     bottom: -50px;
 }
 .en main .header::after {
@@ -54,7 +54,7 @@ body {
 }
 .en main .header::before {
     left: auto;
-    right: -80px;
+    right: -60px;
 }
 .ar .nice-select:after {
     right: auto;
