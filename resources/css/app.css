@@ -66,6 +66,12 @@ body {
     padding-left: 160px;
     text-align: start;
 }
+.en .nice-select,
+.en .nice-select .option {
+    padding-left: 28px;
+    padding-right: 160px;
+    text-align: start;
+}
 .nice-select:after {
     border-color: rgb(66, 66, 66);
 }
@@ -76,4 +82,47 @@ body {
     height: 76px;
     padding-block: 16px;
     border-radius: 12px;
+}
+@media (max-width: 992px) {
+    .type_mony .nice-select .option,
+    .type_mony .nice-select {
+        padding-right: 28px;
+        padding-left: 120px;
+    }
+
+    .ar .nice-select .option,
+    .ar .nice-select {
+        padding-right: 28px;
+        padding-left: 60px;
+    }
+
+    .en .nice-select .option,
+    .en .nice-select {
+        padding-left: 28px;
+        padding-right: 60px;
+    }
+
+    .header::before,
+    .header::after {
+        content: "";
+        width: calc(50% + 20px);
+    }
+
+    .header::after {
+        right: -20px;
+        top: -50px;
+    }
+
+    .header::before {
+        left: -40px;
+        bottom: -50px;
+    }
+    .en main .header::after {
+        left: -20px;
+        right: auto;
+    }
+    .en main .header::before {
+        left: auto;
+        right: -40px;
+    }
 }

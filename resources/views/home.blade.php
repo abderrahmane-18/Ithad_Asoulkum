@@ -38,32 +38,32 @@
 
 <body class="scroll-smooth {{ app()->getLocale() == 'ar' ? 'ar' : 'en' }}">
 
-    <nav class="shadow-md">
-        <div class="container w-8/12 mx-auto">
-            <div class="flex justify-between items-center h-[130px]">
-                <div>
+    <nav class="shadow-md overflow-hidden">
+        <div class="container px-6 md:px-0 md:w-8/12 mx-auto">
+            <div class="flex justify-between  gap-8 items-center h-[130px]">
+                <div {{ app()->getLocale() == 'ar' ? 'data-aos=fade-left' : 'data-aos=fade-right' }}>
                     <a href="{{ route('home') }}">
                         <img src="{{ asset(\App\Models\Setting::where('setting_key', 'logo')->first()->setting_value) }}"
-                            alt="logo" class="w-36" />
+                            alt="logo" class=" w-36" />
                     </a>
                 </div>
-                <div>
-                    <ul class="flex gap-4 items-center ">
+                <div {{ app()->getLocale() == 'ar' ? 'data-aos=fade-right' : 'data-aos=fade-left' }}>
+                    <ul class="flex flex-wrap   items-center justify-center gap-4  ">
                         <li>
                             <a href="{{ route('lang.switchLang', 'ar') }}"
-                                class="w-28 h-12 flex items-center justify-center rounded-xl font-normal transition duration-300 border border-primary text-secondary hover:bg-primary hover:text-white">
+                                class=" text-sm  w-20 h-8 md:text-base md:w-28 md:h-12 flex items-center justify-center rounded-xl font-normal transition duration-300 border border-primary text-secondary hover:bg-primary hover:text-white">
                                 {{ __('front.arbic') }}
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('lang.switchLang', 'en') }}"
-                                class="w-28 h-12 flex items-center justify-center rounded-xl font-normal transition duration-300 border border-primary text-secondary hover:bg-primary hover:text-white">
+                                class="text-sm  w-20 h-8 md:text-base md:w-28 md:h-12 flex items-center justify-center rounded-xl font-normal transition duration-300 border border-primary text-secondary hover:bg-primary hover:text-white">
                                 {{ __('front.english') }}
                             </a>
                         </li>
                         <li>
                             <a href="#contact-us"
-                                class="text-primary font-bold text-lg ms-6 relative  before:absolute before:bottom-[-2px] {{ app()->getLocale() == 'ar' ? 'before:right-0' : 'before:left-0' }} before:w-8 before:bg-primary before:h-[2px] before:rounded-lg ">
+                                class="text-primary font-bold text-sm md:text-lg ms-6 relative  before:absolute before:bottom-[-2px] {{ app()->getLocale() == 'ar' ? 'before:right-0' : 'before:left-0' }} before:w-8 before:bg-primary before:h-[2px] before:rounded-lg ">
                                 <span>{{ __('front.contact-us') }}</span>
 
                             </a>
@@ -79,15 +79,15 @@
     <!--------------
         Main Content
     --------------->
-    <main class="py-32 relative min-h-[800px]">
+    <main class="py-32 relative min-h-[800px] overflow-hidden">
 
         <div class="absolute inset-0   shadow-sm"
             style="background-image: url('{{ asset('assets/image.png') }}');background-size: cover;background-position: center;background-repeat: no-repeat;">
             <div class="absolute inset-0 bg-secondary opacity-60 ">
             </div>
         </div>
-        <h1
-            class="header w-fit mx-auto text-6xl text-white relative z-20 font-light mb-36 flex items-center justify-center gap-6">
+        <h1 data-aos="fade-down"
+            class="header w-fit mx-auto text-4xl md:text-6xl text-white relative z-20 font-light mb-36 flex items-center justify-center gap-6">
             <span>
                 <img src="{{ asset('assets/search.svg') }}" width="48" alt="">
             </span>
@@ -95,10 +95,10 @@
                 {{ __('front.title') }}
             </span>
         </h1>
-        <form class="flex flex-col gap-24 w-8/12 mx-auto relative" id="data_form">
-            <div
+        <form class="flex flex-col gap-24 w-8/12 mx-auto relative " id="data_form">
+            <div data-aos="flip-up"
                 class="w-12/12 relative before:bg-white   before:rounded-2xl before:opacity-100 before:w-full  before:absolute before:inset-0">
-                <div class="flex gap-20 px-12 py-6 ">
+                <div class="flex gap-20 flex-wrap px-12 py-6 ">
                     <div class="flex flex-col items-center  gap-1  relative">
                         <select name="service"
                             class="rounded-lg service bg-transparent border border-none text-neutral-600 font-bold">
@@ -111,7 +111,9 @@
                                 {{ __('front.Investment opportunity') }}</option>
                         </select>
                     </div>
-                    <div class="text-4xl font-extralight border-xl  text-neutral-500 relative z-20 flex mt-[-2px]">|
+                    <div
+                        class="text-4xl font-extralight border-xl hidden xl:flex  text-neutral-500 relative z-20  mt-[-2px]">
+                        |
                     </div>
                     <div class=" div_type_service flex flex-col items-center gap-1  relative">
                         <select name="type_service"
@@ -122,10 +124,12 @@
                             <option disabled>{{ __('front.info') }}</option>
                         </select>
                     </div>
-                    <div class="text-4xl font-extralight border-xl  text-neutral-500 relative z-20 flex mt-[-2px]">|
+                    <div
+                        class="text-4xl font-extralight border-xl  text-neutral-500 relative z-20 hidden xl:flex  mt-[-2px]">
+                        |
                     </div>
 
-                    <div class=" flex-1 relative z-20">
+                    <div class=" min-w-[250px] lg:min-w-[80px] flex-1 relative z-20">
                         <input type="text" id="city" name="city"
                             class="bg-transparent border-none placeholder:font-bold  focus:outline-none focus:border-none placeholder:text-neutral-600  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                             placeholder="{{ __('front.city') }}" />
@@ -133,12 +137,13 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-3 items-center gap-28">
-                <div class=" flex items-center col-span-3 gap-12">
-                    <div class="text-3xl text-white font-light">
-                        {{ __('front.rang_price') }}
-                    </div>
-                    <div class="flex-1">
+            <div class="flex  items-center gap-12 xl:gap-28"
+                {{ app()->getLocale() == 'ar' ? 'data-aos=fade-left' : 'data-aos=fade-right' }}>
+                <div class="text-3xl text-white font-light">
+                    {{ __('front.rang_price') }}
+                </div>
+                <div class=" grid grid-cols-3 items-center  gap-4 lg:gap-12">
+                    <div class="col-span-3 sm:col-span-2 lg:col-span-1">
                         <label for="currency-input"
                             class="mb-2 text-lg font-medium text-gray-900 sr-only dark:text-white">
                         </label>
@@ -156,7 +161,7 @@
                                 placeholder="{{ __('front.Price start') }}" />
                         </div>
                     </div>
-                    <div class="flex-1">
+                    <div class="col-span-3 sm:col-span-2 lg:col-span-1">
                         <label for="currency-input"
                             class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
                             test
@@ -179,7 +184,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="type_mony ">
+                    <div class="type_mony col-span-3 sm:col-span-2 lg:col-span-1  ">
                         <select name="type_mony" id="type_mony">
                             <option value="0" data-display=" {{ __('front.type_mony') }}" disabled>
                                 {{ __('front.type_mony') }}
@@ -190,29 +195,32 @@
                         </select>
                     </div>
                 </div>
-
             </div>
 
 
-            <div
-                class="flex  gap-20 px-12 py-6    w-12/12 relative before:bg-white   before:rounded-2xl before:opacity-100 before:w-full  before:absolute before:inset-0">
-                <div class="relative z-20 w-[25%]">
+            <div {{ app()->getLocale() == 'ar' ? 'data-aos=fade-right' : 'data-aos=fade-left' }}
+                class="flex  flex-wrap gap-20 px-12 py-6    w-12/12 relative before:bg-white   before:rounded-2xl before:opacity-100 before:w-full  before:absolute before:inset-0">
+                <div class="relative z-20  min-w-[20%]">
                     <input type="text" id="first_name" name="name"
                         class="bg-transparent border-none placeholder:font-bold  focus:outline-none focus:border-none placeholder:text-neutral-600  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                         placeholder="{{ __('front.name') }}" />
                 </div>
-                <div class="text-4xl font-extralight border-xl  text-neutral-500 relative z-20 flex mt-[-2px]">|
+                <div
+                    class="text-4xl font-extralight border-xl  text-neutral-500 relative z-20 hidden xl:flex  mt-[-2px]">
+                    |
                 </div>
 
-                <div class="relative z-20 w-[25%]">
+                <div class="relative z-20  min-w-[20%]">
                     <input type="tel" id="phone" name="phone"
                         class="bg-transparent placeholder:text-start border-none placeholder:font-bold  focus:outline-none focus:border-none placeholder:text-neutral-600  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                         placeholder="+966 xx xxx xxxx" />
                 </div>
-                <div class="text-4xl font-extralight border-xl  text-neutral-500 relative z-20 flex mt-[-2px]">|
+                <div
+                    class="text-4xl font-extralight border-xl  text-neutral-500 relative z-20 hidden xl:flex  mt-[-2px]">
+                    |
                 </div>
 
-                <div class="relative z-20 w-[25%]">
+                <div class="relative z-20  min-w-[20%]">
                     <input name="email" type="text" id="email"
                         class="bg-transparent border-none placeholder:font-bold  focus:outline-none focus:border-none placeholder:text-neutral-600  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                         placeholder="odsolcom@odsolcom.com" />
@@ -220,7 +228,7 @@
             </div>
 
 
-            <button id="btn-submit"
+            <button id="btn-submit" data-aos="zoom-in"
                 class=" h-14 flex items-center justify-center rounded-xl text-xl transition duration-300 border border-primary bg-primary text-white hover:bg-transparent hover:text-primary">{{ __('front.submit') }}</button>
         </form>
 
@@ -234,7 +242,8 @@
 
         <div class="container w-8/12 mx-auto">
             <div class="grid grid-cols-2 gap-16 py-12">
-                <div class="col-span-2 md:col-span-1">
+                <div class="col-span-2 md:col-span-1"
+                    {{ app()->getLocale() == 'ar' ? 'data-aos=fade-up-left' : 'data-aos=fade-up-right ?>' }}>
                     <div>
                         <div class="w-fit">
 
@@ -282,7 +291,7 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                <div {{ app()->getLocale() == 'ar' ? 'data-aos=fade-up-right' : 'data-aos=fade-up-left ?>' }}>
                     <h3 class="text-xl mb-6 underline text-secondary    ">{{ __('front.contact info') }}</h3>
                     <div class="flex items-center gap-4 mb-2">
                         <img src="{{ asset('assets/location.svg') }}" alt="" width="16">
@@ -303,7 +312,8 @@
                 </div>
             </div>
         </div>
-        <div class="flex items-center justify-center border  border-t-primary py-6 text-secondary   text-xl">
+        <div
+            class="flex items-center justify-center border  border-t-primary py-6 text-secondary  text-base md:text-xl ">
             {!! __('front.copy_right') !!}
         </div>
     </footer>
@@ -335,7 +345,6 @@
 
     $(document).ready(function() {
         let type_service = {
-
             "{{ __('front.Buy') }}": [
                 "{{ __('front.land') }}",
                 "{{ __('front.palace') }}",

@@ -53,4 +53,5 @@ return [
     'current_password' => 'كلمة المرور الحالية',
     'new_password' => 'كلمة المرور الجديدة',
     'password_confirmation' => 'تأكيد كلمة المرور',
+    'price' => '',
 ];
