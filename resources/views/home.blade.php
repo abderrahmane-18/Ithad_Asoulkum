@@ -421,11 +421,12 @@
             $('select[name="type_service"]').empty();
             $('.div_type_service .list').empty();
             $.each(type_service[service], function(index, value) {
-                $('select[name="type_service"]').append('<option value="' + value + '">' +
+                $('select[name="type_service"]').append('<option data-display="' + value +
+                    '"  value="' + value + '">' +
                     value +
                     '</option>');
                 $('.div_type_service .list').append(
-                    `<li data-value="${value}"  class="option selected">${value}</li>`
+                    `<li data-value="${value}"  class="option ">${value}</li>`
                 )
             });
         })
@@ -436,7 +437,7 @@
             HideValidationError(form);
             var data = {
                 service: $('.service').val(),
-                type_service: $('select[name="type_service"]').val(),
+                type_service: $('.div_type_service .current').html(),
                 city: $('#city').val(),
                 price_start: $('#currency-input').val(),
                 price_end: $('#currency-input').val(),
