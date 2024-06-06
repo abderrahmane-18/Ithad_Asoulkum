@@ -17,8 +17,7 @@ class HomeController extends Controller
     {
 
 
-        $data = $request->all();
-        dd($data);
+        $data = $request->except('checkbox');
         $reservation = Reservation::create($data);
 
         $status = true;
