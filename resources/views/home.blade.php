@@ -276,23 +276,32 @@
                                     <img src="{{ asset('assets/youtube.svg') }}" alt="youtube" class="w-7 h-7" />
                                 </a>
                             @endif
-                            <a href="{{ \App\Models\Setting::where('setting_key', 'twitter')->first()->setting_value }} "
-                                target="__blanc" class="transition duration-300  hover:opacity-40">
-                                <img src="{{ asset('assets/twitter.svg') }}" alt="twitter" class="w-7 h-7" />
-                            </a>
-                            <a href="{{ \App\Models\Setting::where('setting_key', 'tiktok')->first()->setting_value }} "
-                                target="__blanc" class="transition duration-300  hover:opacity-40">
-                                <img src="{{ asset('assets/tiktok.svg') }}" alt="tiktok"
-                                    class="w-[1.5rem] h-[1.5rem]" />
-                            </a>
-                            <a href="{{ \App\Models\Setting::where('setting_key', 'instagram')->first()->setting_value }} "
-                                target="__blanc" class="transition duration-300  hover:opacity-40">
-                                <img src="{{ asset('assets/instagram.svg') }}" alt="instagram" class="w-7 h-7" />
-                            </a>
-                            <a href="{{ \App\Models\Setting::where('setting_key', 'snapchat')->first()->setting_value }} "
-                                target="__blanc" class="transition duration-300  hover:opacity-40">
-                                <img src="{{ asset('assets/snapchat.svg') }}" alt="snapchat" class="w-7 h-7" />
-                            </a>
+                            @if ($twitter)
+                                <a href="{{ \App\Models\Setting::where('setting_key', 'twitter')->first()->setting_value }} "
+                                    target="__blanc" class="transition duration-300  hover:opacity-40">
+                                    <img src="{{ asset('assets/twitter.svg') }}" alt="twitter" class="w-7 h-7" />
+                                </a>
+                            @endif
+                            @if ($tiktok)
+                                <a href="{{ \App\Models\Setting::where('setting_key', 'tiktok')->first()->setting_value }} "
+                                    target="__blanc" class="transition duration-300  hover:opacity-40">
+                                    <img src="{{ asset('assets/tiktok.svg') }}" alt="tiktok"
+                                        class="w-[1.5rem] h-[1.5rem]" />
+                                </a>
+                            @endif
+                            @if ($instagram)
+                                <a href="{{ \App\Models\Setting::where('setting_key', 'instagram')->first()->setting_value }} "
+                                    target="__blanc" class="transition duration-300  hover:opacity-40">
+                                    <img src="{{ asset('assets/instagram.svg') }}" alt="instagram"
+                                        class="w-7 h-7" />
+                                </a>
+                            @endif
+                            @if ($snapchat)
+                                <a href="{{ \App\Models\Setting::where('setting_key', 'snapchat')->first()->setting_value }} "
+                                    target="__blanc" class="transition duration-300  hover:opacity-40">
+                                    <img src="{{ asset('assets/snapchat.svg') }}" alt="snapchat" class="w-7 h-7" />
+                                </a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -319,7 +328,7 @@
         </div>
         <div
             class="flex items-center justify-center border  border-t-primary py-6 text-secondary  text-base md:text-xl ">
-            {!! __('front.copy_right') !!}
+
         </div>
     </footer>
 </body>

@@ -40,6 +40,7 @@ class SettingController extends Controller
             'snapchat' => 'nullable',
             'tiktok' => 'nullable',
             'instagram' => 'nullable',
+            'telephone' => 'nullable',
             'email' => 'nullable',
         ]);
 
