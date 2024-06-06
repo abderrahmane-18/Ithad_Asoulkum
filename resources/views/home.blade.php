@@ -328,7 +328,7 @@
         </div>
         <div
             class="flex items-center justify-center border  border-t-primary py-6 text-secondary  text-base md:text-xl ">
-
+            {!! __('front.copy_right') !!}
         </div>
     </footer>
 </body>
