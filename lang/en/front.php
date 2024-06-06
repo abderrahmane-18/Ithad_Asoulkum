@@ -24,8 +24,8 @@ return [
     'application_success' => 'Application Success',
     'arbic' => 'Arabic',
     'english' => 'English',
-    'copy_right' => 'All rights reserved to Asoulkum Company &copy; <span class="text-primary">2024</span>',
-    'follow_us' => 'Follow us',
+    'copy_right' => 'All rights reserved to Asoulkum  &copy; <span class="text-primary">2024</span>',
+    'follow_us' => 'Coverage and announcements on our accounts',
     'contact info' => 'Contact Information',
     'title' => 'Search for me',
     "contact-us" => "Contact us",
@@ -47,6 +47,16 @@ return [
     'development_project' => 'development project',
     'partnership' => 'partnership',
     'other' => 'other',
+    'Office' => 'Office',
+    'Shop' => 'Shop',
+    'Floor' => 'Floor',
+    'Showroom' => 'Showroom',
+    'Studio' => 'Studio',
+    'Compound' => 'Compound',
+    'Warehouse' => 'Warehouse',
+    'Station' => 'Station',
+
+    'enter_phone' => 'Enter phone number',
 
     'rang_price' => 'Range of Price ',
 
@@ -54,4 +64,6 @@ return [
     'dollar' => 'dollar',
     'riyal' => 'riyal',
     'dirham' => 'dirham',
+    'checkbox' => 'I am pleased to receive my request at my addresses',
+
 ];

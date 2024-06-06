@@ -174,10 +174,11 @@ return [
             'rule-name' => 'custom-message',
         ],
         'form' => [
-            'required' => 'This field is required',
-            'numeric' => 'This field must be a number',
-            'email' => "This field must be a valid email address",
-            'regex' => 'Please enter a valid phone number',
+            'required' => 'This field is required.',
+            'numeric' => 'This field must be a number.',
+            'email' => 'This field must be a valid email address.',
+            'regex' => 'Please enter a valid phone number.',
+            'accepted' => 'You must accept the terms and conditions.',
         ],
     ],
 

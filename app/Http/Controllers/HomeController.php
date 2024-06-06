@@ -16,7 +16,9 @@ class HomeController extends Controller
     public function store(ReservationRequest $request)
     {
 
+
         $data = $request->all();
+        dd($data);
         $reservation = Reservation::create($data);
 
         $status = true;

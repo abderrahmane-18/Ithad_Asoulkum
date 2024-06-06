@@ -21,6 +21,7 @@ class ReservationRequest extends FormRequest
      */
     public function rules(): array
     {
+
         return [
             'service' => 'required|not_in:0',
             'type_service' => 'required|not_in:0',
@@ -32,6 +33,7 @@ class ReservationRequest extends FormRequest
             'email' => 'required|email',
             'phone' => 'required|numeric',
             'email' => 'required|email',
+            'checkbox' => 'required|not_in:0',
         ];
     }
 
@@ -53,6 +55,7 @@ class ReservationRequest extends FormRequest
             'type_service.not_in' => __('validation.custom.form.required'),
             'price_start.numeric' => __('validation.custom.form.numeric'),
             'price_end.numeric' => __('validation.custom.form.numeric'),
+            'checkbox.not_in' => __('validation.custom.form.accepted'),
         ];
     }
 }

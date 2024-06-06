@@ -142,12 +142,12 @@
                 <div class="text-3xl text-white font-light">
                     {{ __('front.rang_price') }}
                 </div>
-                <div class=" grid grid-cols-3 items-center  gap-4 lg:gap-12">
+                <div class=" grid grid-cols-3 items-center  gap-4 lg:gap-12 relative ">
                     <div class="col-span-3 sm:col-span-2 lg:col-span-1">
                         <label for="currency-input"
                             class="mb-2 text-lg font-medium text-gray-900 sr-only dark:text-white">
                         </label>
-                        <div class="relative w-full">
+                        <div class="relative w-full ">
                             <div class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none">
                                 <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
@@ -189,8 +189,8 @@
                             <option value="0" data-display=" {{ __('front.type_mony') }}" disabled>
                                 {{ __('front.type_mony') }}
                             </option>
-                            <option value="1">{{ __('front.dollar') }} </option>
                             <option value="2 ">{{ __('front.riyal') }} </option>
+                            <option value="1">{{ __('front.dollar') }} </option>
                             <option value="3">{{ __('front.dirham') }} </option>
                         </select>
                     </div>
@@ -213,7 +213,7 @@
                 <div class="relative z-20  min-w-[20%]">
                     <input type="tel" id="phone" name="phone"
                         class="bg-transparent placeholder:text-start border-none placeholder:font-bold  focus:outline-none focus:border-none placeholder:text-neutral-600  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="+966 xx xxx xxxx" />
+                        placeholder="{{ __('front.enter_phone') }}" />
                 </div>
                 <div
                     class="text-4xl font-extralight border-xl  text-neutral-500 relative z-20 hidden xl:flex  mt-[-2px]">
@@ -226,7 +226,12 @@
                         placeholder="odsolcom@odsolcom.com" />
                 </div>
             </div>
-
+            <div class="flex items-center my-[-60px]">
+                <input id="default-checkbox" type="checkbox" name="checkbox" value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <label for="default-checkbox"
+                    class="mx-4 text-lg  font-medium text-white">{{ __('front.checkbox') }}</label>
+            </div>
 
             <button id="btn-submit" data-aos="zoom-in"
                 class=" h-14 flex items-center justify-center rounded-xl text-xl transition duration-300 border border-primary bg-primary text-white hover:bg-transparent hover:text-primary">{{ __('front.submit') }}</button>
@@ -356,7 +361,15 @@
                 "{{ __('front.retreat') }}",
                 "{{ __('front.chalet') }}",
                 "{{ __('front.farm') }}",
-                "{{ __('front.yard') }}"
+                "{{ __('front.yard') }}",
+                "{{ __('front.Office') }}",
+                "{{ __('front.Shop') }}",
+                "{{ __('front.Showroom') }}",
+                "{{ __('front.Floor') }}",
+                "{{ __('front.Studio') }}",
+                "{{ __('front.Compound') }}",
+                "{{ __('front.Warehouse') }}",
+                "{{ __('front.Station') }}",
             ],
             "{{ __('front.Rent') }}": [
                 "{{ __('front.land') }}",
@@ -369,7 +382,15 @@
                 "{{ __('front.retreat') }}",
                 "{{ __('front.chalet') }}",
                 "{{ __('front.farm') }}",
-                "{{ __('front.yard') }}"
+                "{{ __('front.yard') }}",
+                "{{ __('front.Office') }}",
+                "{{ __('front.Shop') }}",
+                "{{ __('front.Showroom') }}",
+                "{{ __('front.Floor') }}",
+                "{{ __('front.Studio') }}",
+                "{{ __('front.Compound') }}",
+                "{{ __('front.Warehouse') }}",
+                "{{ __('front.Station') }}",
             ],
             "{{ __('front.Investment opportunity') }}": [
                 "{{ __('front.land') }}",
@@ -377,7 +398,7 @@
                 "{{ __('front.tower') }}",
                 "{{ __('front.development_project') }}",
                 "{{ __('front.partnership') }}",
-                "{{ __('front.other') }}"
+                "{{ __('front.other') }}",
             ],
         }
 
@@ -409,7 +430,8 @@
                 name: $('#first_name').val(),
                 company: $('#company').val(),
                 phone: $('#phone').val(),
-                email: $('#email').val()
+                email: $('#email').val(),
+                checkbox: $('[name="checkbox"]').is(':checked') ? 1 : 0,
             };
 
             $.ajax({
@@ -428,6 +450,7 @@
                     }
                 },
                 error: function(response) {
+
                     let array = []
                     $.each(response.responseJSON.errors, function(i, value) {
                         let index = i.split('.')[0];

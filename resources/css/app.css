@@ -76,8 +76,15 @@ body {
     border-color: rgb(66, 66, 66);
 }
 .nice-select .list {
-    z-index: 100 !important;
+    position: absolute !important;
+    z-index: 1000 !important;
+    max-height: 400px;
+    overflow: auto;
 }
+.nice-select .list::-webkit-scrollbar {
+    width: 2px;
+}
+
 .type_mony .nice-select {
     height: 76px;
     padding-block: 16px;
@@ -125,4 +132,13 @@ body {
         left: auto;
         right: -40px;
     }
+}
+[data-aos] {
+    pointer-events: none;
+}
+.aos-animate {
+    pointer-events: auto;
+}
+.aos-init[data-aos][data-aos].aos-animate {
+    transform: unset;
 }
