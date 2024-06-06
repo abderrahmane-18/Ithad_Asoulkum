@@ -82,7 +82,7 @@ body {
     overflow: auto;
 }
 .nice-select .list::-webkit-scrollbar {
-    width: 2px;
+    width: 8px;
 }
 
 .type_mony .nice-select {

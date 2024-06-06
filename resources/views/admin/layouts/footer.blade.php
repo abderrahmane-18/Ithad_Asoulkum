@@ -4,8 +4,8 @@
         <!--begin::Copyright-->
         <div class="text-dark order-2 order-md-1">
             <span class="text-muted fw-bold me-1">{{ now()->year }}©</span>
-            <a href="https://khaldiabdou.com" target="_blank" class="text-gray-800 text-hover-primary">Developed by
-                Abdou</a>
+            <span class="text-gray-800 text-hover-primary">Developed by
+            </span>
         </div>
         <!--end::Copyright-->
     </div>

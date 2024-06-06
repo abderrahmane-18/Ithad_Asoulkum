@@ -13,8 +13,6 @@
         content="{{ \App\Models\Setting::where('setting_key', 'website_name_' . getLocale())->first()->setting_value }}" />
     <meta name="description"
         content="{{ \App\Models\Setting::where('setting_key', 'description_' . getLocale())->first()->setting_value }}" />
-    <meta name="author" content="Khaldi Mohamed Abdelahmid Esadek (Abdou)" />
-    <meta name="copyright" content="https://khaldiabdou.com/" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="shortcut icon"
@@ -330,9 +328,10 @@
             <div class="flex items-center justify-between  flex-wrap w-8/12 mx-auto">
                 <div>{!! __('front.copy_right') !!}</div>
                 <div class="flex gap-2 items-center">
-                    <span> {{ __('front.powered_by') }}</span><img class="" width="16"
-                        src="{{ asset('assets/heart.svg') }}" alt=""> <a class="text-secondary underline"
-                        href="https://khaldiabdou.com/" target="__blanc">{{ __('front.dev') }}</a>
+
+                    <a class="text-secondary underline" href="{{ asset('assets/filename.pdf') }}"
+                        target="__blanc"><img class="" src="{{ asset('assets/second_logo.png') }}"
+                            width="200px" alt=""></a>
                 </div>
             </div>
         </div>
