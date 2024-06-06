@@ -52,4 +52,6 @@ return [
     'current_password' => 'Current password',
     'new_password' => 'New password',
     'password_confirmation' => 'Password confirmation',
+    'number_reservation' => 'Number Reservation',
+
 ];
