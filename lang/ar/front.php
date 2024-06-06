@@ -25,7 +25,7 @@ return [
     'arbic' => 'عربي',
     'english' => 'English',
     'contact-us' => 'إتصل بنــا',
-    'copy_right' => 'جميع الحقوق محفوظة  أصولكم &copy; <span class="text-primary">2024</span>',
+    'copy_right' => 'جميع الحقوق محفوظة  لأصولكم &copy; <span class="text-primary">2024</span>',
     'follow_us' => 'تغطيات واعلانات على حساباتنا',
     'contact info' => 'معلومات الإتصال',
     'title' => 'إبـــــــحث لـي',
@@ -62,5 +62,7 @@ return [
     'checkbox' => 'يسرني استقبال طلبي على عناويني  ',
 
     'enter_phone' => 'ادخل رقم الهاتف',
+    'powered_by' => 'تم تطوير بواسطة ',
+    'dev' => 'عبدو ',
 
 ];

@@ -326,9 +326,15 @@
                 </div>
             </div>
         </div>
-        <div
-            class="flex items-center justify-center border  border-t-primary py-6 text-secondary  text-base md:text-xl ">
-            {!! __('front.copy_right') !!}
+        <div class=" border  border-t-primary py-6 text-secondary  text-base md:text-xl ">
+            <div class="flex items-center justify-between  flex-wrap w-8/12 mx-auto">
+                <div>{!! __('front.copy_right') !!}</div>
+                <div class="flex gap-2 items-center">
+                    <span> {{ __('front.powered_by') }}</span><img class="" width="16"
+                        src="{{ asset('assets/heart.svg') }}" alt=""> <a class="text-secondary underline"
+                        href="https://khaldiabdou.com/" target="__blanc">{{ __('front.dev') }}</a>
+                </div>
+            </div>
         </div>
     </footer>
 </body>

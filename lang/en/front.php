@@ -65,5 +65,7 @@ return [
     'riyal' => 'riyal',
     'dirham' => 'dirham',
     'checkbox' => 'I am pleased to receive my request at my addresses',
+    'powered_by' => 'Powered By ',
+    'dev' => 'Abdou ',
 
 ];
