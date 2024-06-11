@@ -10,6 +10,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JoinUsController;
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\ReorderController;
 use App\Http\Controllers\ReservationController;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
@@ -42,6 +43,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'guest'], function () {
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('dashboard', [HomeDashController::class, 'index'])->name('dashboard.home');
+
+    // item order
+    Route::get('/{segment}/re-order/{id?}', [ReorderController::class, 'index'])->name('dashboard.reorder.index');
+    Route::post('/re-order/update', [ReorderController::class, 'update'])->name('dashboard.reorder.update');
 
     //logout
     Route::get('logout', [LoginController::class, 'logout'])->name('dashboard.logout');
