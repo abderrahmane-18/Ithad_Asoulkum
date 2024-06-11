@@ -274,5 +274,3 @@
         });
     </script>
 @endpush
-
-</html>

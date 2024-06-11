@@ -112,5 +112,3 @@
         });
     </script>
 @endpush
-
-</html>

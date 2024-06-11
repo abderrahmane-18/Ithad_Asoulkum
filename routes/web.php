@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JoinUsController;
 use App\Http\Controllers\LanguageController;
@@ -74,3 +75,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
 Route::post('join_us/store', [JoinUsController::class, 'join'])->name('join_us.store');
 Route::get('join_us', [JoinUsController::class, 'show'])->name('join_us.show');
+
+Route::get('faq', [FaqController::class, 'index'])->name('faq.index');

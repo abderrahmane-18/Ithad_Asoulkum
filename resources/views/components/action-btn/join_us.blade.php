@@ -40,12 +40,17 @@
                                 <td class="ps-3">{{ __('dash.city') }}</td>
                                 <td>{{ $record->city }}</td>
                             </tr>
-                            {{--
-                            <tr class="p-4">
-                                <td class="ps-3">{{ __('dash.name') }}</td>
-                                <td>{{ $record->name }}</td>
-                            </tr> --}}
 
+                            <tr class="p-4">
+                                <td class="ps-3">{{ __('dash.fal') }}</td>
+                                <td class="">
+                                    <a class="px-4" target="__blank"
+                                        href="{{ env('APP_URL') . '/' . $record->filepath }}">{{ $record->filename }}</a>
+                                    <a class="px-4 btn btn-success" target="__blank"
+                                        href="{{ env('APP_URL') . '/' . $record->filepath }}"
+                                        download="{{ $record->filename }}">{{ __('dash.downolad') }}</a>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

@@ -51,6 +51,7 @@
 <script src="{{ asset('assets/lib/jquery.nice-select.min.js') }}"></script>
 <script src="{{ asset('assets/lib/aos.js') }}"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
 @vite('resources/js/app.js')
 @stack('script')
 
