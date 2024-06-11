@@ -43,6 +43,27 @@ class ProjectModelSeeder extends Seeder
 
         ProjectModel::create([
             'parent_id' => '0',
+            'title_ar' => 'الصفحات',
+            'title_en' => 'Pages',
+            "is_menu" => '1',
+            "icon" =>  'fas fa-users',
+            "order_by" => '1'
+        ]);
+
+        ProjectModel::create([
+            'parent_id' => '4',
+            'title_ar' => 'صفحة الاسئلة',
+            'route_key' => 'faqs',
+            'model' => 'Faq',
+            'model_name' => 'App\Models\Faq',
+            'title_en' => 'Faqs',
+            "is_menu" => '1',
+            "icon" =>  'fas fa-users',
+            "order_by" => '1'
+        ]);
+
+        ProjectModel::create([
+            'parent_id' => '0',
             'route_key' => 'reservations',
             'title_ar' => 'الحجوزات',
             'title_en' => 'Reservations',

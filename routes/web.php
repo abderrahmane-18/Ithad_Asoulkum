@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\FaqPageController;
 use App\Http\Controllers\Admin\HomeDashController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\ProfileController;
@@ -63,6 +64,19 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     //settings
     Route::get('/settings', [SettingController::class, 'index'])->name('dashboard.settings.index');
     Route::post('/settings', [SettingController::class, 'update'])->name('dashboard.settings.update');
+
+
+    //pages
+    Route::get('faqs', [FaqPageController::class, 'index'])->name('dashboard.faqs.index');
+    Route::get('faqs/create', [FaqPageController::class, 'create'])->name('dashboard.faqs.create');
+    Route::post('faqs/store', [FaqPageController::class, 'store'])->name('dashboard.faqs.store');
+    Route::get('faqs/{obj}/edit', [FaqPageController::class, 'edit'])->name('dashboard.faqs.edit');
+    Route::post('faqs/{obj}/update', [FaqPageController::class, 'update'])->name('dashboard.faqs.update');
+    Route::delete('faqs/{obj}/delete', [FaqPageController::class, 'destroy'])->name('dashboard.faqs.destroy');
+
+
+
+
 
     //reservation
     Route::get('reservations', [ReservationController::class, 'index'])->name('dashboard.reservations.index');
