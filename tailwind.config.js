@@ -6,7 +6,9 @@ export default {
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
+        "./node_modules/tw-elements/js/**/*.js",
     ],
+    plugins: [require("tw-elements/plugin.cjs")],
     theme: {
         extend: {
             colors: {

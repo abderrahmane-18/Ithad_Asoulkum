@@ -18,7 +18,7 @@ class ReservationController extends Controller
 
     public function index()
     {
-        $data = Reservation::orderBy('id', 'desc')->get();
+        $data = Reservation::all();
         return view('admin.reservations.index', compact('data'));
     }
     public function destroy(Request $request, Reservation $obj)

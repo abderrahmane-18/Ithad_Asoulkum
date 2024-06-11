@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\JoinUsController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\ReservationController;
 use GuzzleHttp\Middleware;
@@ -37,7 +38,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'guest'], function () {
     Route::post('admin/login/submit', [LoginController::class, 'login'])->name('dashboard.login.form');
 });
 
-
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('dashboard', [HomeDashController::class, 'index'])->name('dashboard.home');
 
@@ -65,9 +65,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     //reservation
     Route::get('reservations', [ReservationController::class, 'index'])->name('dashboard.reservations.index');
-    Route::get('reservations/create', [ReservationController::class, 'create'])->name('dashboard.reservations.create');
-    Route::post('reservations/store', [ReservationController::class, 'store'])->name('dashboard.reservations.store');
-    Route::get('reservations/{obj}/edit', [ReservationController::class, 'edit'])->name('dashboard.reservations.edit');
-    Route::post('reservations/{obj}/update', [ReservationController::class, 'update'])->name('dashboard.reservations.update');
     Route::delete('reservations/{obj}/delete', [ReservationController::class, 'destroy'])->name('dashboard.reservations.destroy');
+
+    //join_us
+    Route::get('join_us', [JoinUsController::class, 'index'])->name('dashboard.join_us.index');
+    Route::delete('join_us/{obj}/delete', [JoinUsController::class, 'destroy'])->name('dashboard.join_us.destroy');
 });
+
+Route::post('join_us/store', [JoinUsController::class, 'join'])->name('join_us.store');
+Route::get('join_us', [JoinUsController::class, 'show'])->name('join_us.show');
