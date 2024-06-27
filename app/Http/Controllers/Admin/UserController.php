@@ -129,6 +129,5 @@ class UserController extends Controller
             $msg = $e->getMessage();
         }
         return response()->json(compact('status', 'msg'));
-
     }
 }
