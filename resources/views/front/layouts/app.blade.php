@@ -31,7 +31,7 @@
     </title>
 </head>
 
-<body class="scroll-smooth {{ app()->getLocale() == 'ar' ? 'ar' : 'en' }}">
+<body class="scroll-smooth overflow-x-hidden {{ app()->getLocale() == 'ar' ? 'ar' : 'en' }}">
     @include('front.layouts.header')
 
     <!--------------

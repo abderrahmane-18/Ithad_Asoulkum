@@ -6,7 +6,7 @@
                 <h1 data-aos="fade-down"
                     class="w-fit mx-auto text-4xl md:text-6xl text-primary relative z-20 font-light mb-20 flex items-center justify-center gap-6">
                     <span>
-                        <img src="{{ asset('assets/join-us.png') }}" width="48" alt="">
+                        <img src="{{ asset('assets/faq.png') }}" width="48" alt="">
                     </span>
                     <span>
                         {{ __('front.faq') }}
@@ -14,9 +14,9 @@
                 </h1>
                 <ul class="flex flex-col">
                     @foreach ($faqs as $faq)
-                        <li class="bg-white my-2 shadow-lg" x-data="accordion({{ $loop->index + 1 }})">
+                        <li class="bg-white my-2 shadow border border-1 rounded-md" x-data="accordion({{ $loop->index + 1 }})">
                             <h2 @click="handleClick()"
-                                class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
+                                class="flex flex-row justify-between items-center font-semibold  cursor-pointer p-6">
                                 <span>{{ $faq->{'question_' . getLocale()} }}</span>
                                 <svg :class="handleRotate()"
                                     class="fill-current text-primary h-6 w-6 transform transition-transform duration-500"
@@ -28,7 +28,7 @@
                             </h2>
                             <div x-ref="tab" :style="handleToggle()"
                                 class="border-l-2 border-primary overflow-hidden max-h-0 duration-500 transition-all">
-                                <p class="p-3 text-gray-900">
+                                <p class=" p-6 text-gray-900">
                                     {{ $faq->{'answer_' . getLocale()} }}
                                 </p>
                             </div>
