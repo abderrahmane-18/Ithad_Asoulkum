@@ -22,10 +22,17 @@ class JoinRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required',
-            'phone' => 'required',
-            'city' => 'required',
-            'fal' => 'required|max:' . getMaxSize() . '|mimes:' . acceptFileType(0),
+            'name' => 'required|string|max:191',
+            'company' => 'required|string|max:191',
+            'jop_title' => 'required|string|max:191',
+            'city' => 'required|string|max:191',
+            'phone' => 'required|string|max:191',
+            'email' => 'required|string|max:191',
+            'website_name' => 'required|string|max:191',
+            'type_partner' => 'required|string|max:191',
+            'notes' => 'required|string|max:1000',
+
+            // 'fal' => 'required|max:' . getMaxSize() . '|mimes:' . acceptFileType(0),
         ];
     }
 }

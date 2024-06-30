@@ -14,7 +14,7 @@
             {{ __('front.title') }}
         </span>
     </h1>
-    <form class="flex flex-col gap-24 w-8/12 mx-auto relative " id="data_form">
+    <form class="home flex flex-col gap-24 w-8/12 mx-auto relative " id="data_form">
         <div data-aos="flip-up"
             class="w-12/12 relative before:bg-white   before:rounded-2xl before:opacity-100 before:w-full  before:absolute before:inset-0">
             <div class="flex gap-20 flex-wrap px-12 py-6 ">

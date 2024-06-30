@@ -71,6 +71,18 @@ return [
     'join-us' => 'إنضم إلينا',
     'Upload' => 'رفع',
     'upload_fal_pdf' => 'إرفع ملف فال  بي دي اف',
+    'to_be_pattren' => 'كن شريكنا في النجاح ',
+    'website_name' => 'الموقع الإلكتروني',
+    'jop_title' => 'الوظيفة ',
+    'company' => 'الشركة/الموسسة',
+    'choose_type_partner' => 'نوع الشراكة',
+    'Real estate platform' => 'منصة عقارية  ',
+    'Investor' => 'مستثمر ',
+    'Real estate office' => 'مكتب عقاري ',
+    'Certified real estate marketer' => 'مسوق عقاري معتمد  ',
+    'Certified notary' => 'موثق معتمد',
+    'Collaborator' => 'متعاون ',
+    'notes' => 'استفسارات أخرى ',
 
 
 ];

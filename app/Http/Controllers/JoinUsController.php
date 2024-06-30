@@ -24,6 +24,25 @@ class JoinUsController extends Controller
         return view('admin.join_us.index', compact('data'));
     }
 
+    public function show()
+    {
+        return view('front.join_us');
+    }
+
+    public function join(JoinRequest $request)
+    {
+        // $data = $request->except('fal');
+        // $data['filepath'] = generalUpload($this->model->model, $request->fal);
+        // $data['filename'] = $request->fal->getClientOriginalName();
+
+        $data = $request->validated();
+        JoinUs::create($data);
+
+        $status = true;
+        $msg = __('front.application_success');
+        return response()->json(compact('status', 'msg'));
+    }
+
     public function destroy(Request $request, JoinUs $obj)
     {
         try {
@@ -34,23 +53,6 @@ class JoinUsController extends Controller
             $status = false;
             $msg = $e->getMessage();
         }
-        return response()->json(compact('status', 'msg'));
-    }
-
-    public function show()
-    {
-        return view('front.join_us');
-    }
-
-    public function join(JoinRequest $request)
-    {
-        $data = $request->except('fal');
-        $data['filepath'] = generalUpload($this->model->model, $request->fal);
-        $data['filename'] = $request->fal->getClientOriginalName();
-        JoinUs::create($data);
-
-        $status = true;
-        $msg = __('front.application_success');
         return response()->json(compact('status', 'msg'));
     }
 }

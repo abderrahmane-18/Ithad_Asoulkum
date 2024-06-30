@@ -12,9 +12,11 @@
                         {{ __('front.faq') }}
                     </span>
                 </h1>
-                <ul class="flex flex-col">
+                <ul class="flex flex-col overflow-hidden">
                     @foreach ($faqs as $faq)
-                        <li class="bg-white my-2 shadow border border-1 rounded-md" x-data="accordion({{ $loop->index + 1 }})">
+                        <li {{ $loop->index % 2 == 0 ? 'data-aos=fade-left' : 'data-aos=fade-right' }}
+                            data-aos-duration="1000" class="bg-white my-2 shadow border border-1 rounded-md"
+                            x-data="accordion({{ $loop->index + 1 }})">
                             <h2 @click="handleClick()"
                                 class="flex flex-row justify-between items-center font-semibold  cursor-pointer p-6">
                                 <span>{{ $faq->{'question_' . getLocale()} }}</span>

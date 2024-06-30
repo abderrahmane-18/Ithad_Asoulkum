@@ -194,6 +194,16 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'name' => 'الإسم',
+        'company' => 'الشركة / المؤسسة',
+        'jop_title' => 'الوظيفة',
+        'city' => 'المدينة',
+        'phone' => 'الهاتف',
+        'email' => 'الإميل',
+        'website_name' => 'الموقع الإالكتروني',
+        'type_partner' => 'نوع الشراكة',
+        'notes' => 'الاستفسارات',
+    ],
 
 ];

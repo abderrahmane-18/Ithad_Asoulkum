@@ -6,6 +6,9 @@
     .link {
         @apply text-primary font-bold text-sm md:text-lg ms-6 relative  before:absolute before:bottom-[-2px] rtl:before:right-0  ltr:before:left-0  before:w-8 before:bg-primary before:h-[2px] before:rounded-lg before:transition before:duration-300  hover:before:w-full;
     }
+    .input_join {
+        @apply placeholder:font-bold border border-neutral-300 focus:outline-none  placeholder:text-neutral-700 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5;
+    }
 }
 
 body {
@@ -63,23 +66,39 @@ body {
     left: auto;
     right: -60px;
 }
-.ar .nice-select:after {
+
+.join .nice-select:after {
     right: auto;
     left: 12px;
 }
-.ar .nice-select,
-.ar .nice-select .option {
+.join .nice-select {
+    text-align: right !important;
+}
+.join .nice-select.open .list {
+    width: 100%;
+}
+
+.join .nice-select .option {
+    text-align: right !important;
+}
+
+.home .ar .nice-select:after {
+    right: auto;
+    left: 12px;
+}
+.home .ar .nice-select,
+.home .ar .nice-select .option {
     padding-right: 28px;
     padding-left: 160px;
     text-align: start;
 }
-.en .nice-select,
-.en .nice-select .option {
+.home .en .nice-select,
+.home .en .nice-select .option {
     padding-left: 28px;
     padding-right: 160px;
     text-align: start;
 }
-.nice-select:after {
+.home .nice-select:after {
     border-color: rgb(66, 66, 66);
 }
 .nice-select .list {
@@ -88,30 +107,30 @@ body {
     max-height: 400px;
     overflow: auto;
 }
-.nice-select .list::-webkit-scrollbar {
+.home .nice-select .list::-webkit-scrollbar {
     width: 8px;
 }
 
-.type_mony .nice-select {
+.home .type_mony .nice-select {
     height: 76px;
     padding-block: 16px;
     border-radius: 12px;
 }
 @media (max-width: 992px) {
-    .type_mony .nice-select .option,
-    .type_mony .nice-select {
+    .home .type_mony .nice-select .option,
+    .home .type_mony .nice-select {
         padding-right: 28px;
         padding-left: 120px;
     }
 
-    .ar .nice-select .option,
-    .ar .nice-select {
+    .home .ar .nice-select .option,
+    .home .ar .nice-select {
         padding-right: 28px;
         padding-left: 60px;
     }
 
-    .en .nice-select .option,
-    .en .nice-select {
+    .home .en .nice-select .option,
+    .home .en .nice-select {
         padding-left: 28px;
         padding-right: 60px;
     }

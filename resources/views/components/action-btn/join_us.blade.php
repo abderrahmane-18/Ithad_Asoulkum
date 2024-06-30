@@ -29,28 +29,42 @@
                         </thead>
                         <tbody class="fw-bold text-gray-800">
                             <tr class="p-4">
-                                <td class="ps-3">{{ __('dash.service') }}</td>
+                                <td class="ps-3">{{ __('front.name') }}</td>
                                 <td>{{ $record->name }}</td>
                             </tr>
                             <tr class="p-4">
-                                <td class="ps-3">{{ __('dash.type_service') }}</td>
+                                <td class="ps-3">{{ __('front.company') }}</td>
+                                <td>{{ $record->company }}</td>
+                            </tr>
+                            <tr class="p-4">
+                                <td class="ps-3">{{ __('front.jop_title') }}</td>
+                                <td>{{ $record->jop_title }}</td>
+                            </tr>
+                            <tr class="p-4">
+                                <td class="ps-3">{{ __('front.city') }}</td>
+                                <td>{{ $record->city }}</td>
+                            </tr>
+                            <tr class="p-4">
+                                <td class="ps-3">{{ __('front.phone') }}</td>
                                 <td>{{ $record->phone }}</td>
                             </tr>
                             <tr class="p-4">
-                                <td class="ps-3">{{ __('dash.city') }}</td>
-                                <td>{{ $record->city }}</td>
+                                <td class="ps-3">{{ __('front.email') }}</td>
+                                <td>{{ $record->email }}</td>
+                            </tr>
+                            <tr class="p-4">
+                                <td class="ps-3">{{ __('front.website_name') }}</td>
+                                <td>{{ $record->website_name }}</td>
+                            </tr>
+                            <tr class="p-4">
+                                <td class="ps-3">{{ __('front.choose_type_partner') }}</td>
+                                <td>{{ $record->type_partner }}</td>
+                            </tr>
+                            <tr class="p-4">
+                                <td class="ps-3">{{ __('front.notes') }}</td>
+                                <td>{{ $record->notes }}</td>
                             </tr>
 
-                            <tr class="p-4">
-                                <td class="ps-3">{{ __('dash.fal') }}</td>
-                                <td class="">
-                                    <a class="px-4" target="__blank"
-                                        href="{{ env('APP_URL') . '/' . $record->filepath }}">{{ $record->filename }}</a>
-                                    <a class="px-4 btn btn-success" target="__blank"
-                                        href="{{ env('APP_URL') . '/' . $record->filepath }}"
-                                        download="{{ $record->filename }}">{{ __('dash.downolad') }}</a>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>

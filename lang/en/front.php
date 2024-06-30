@@ -68,4 +68,11 @@ return [
     'powered_by' => 'Powered By ',
     'dev' => 'Abdou ',
 
+    'home' => 'Home',
+    'faq' => 'FAQ',
+    'join-us' => 'Join Us',
+    'Upload' => 'Upload',
+    'upload_fal_pdf' => 'Upload FAL PDF File',
+
+
 ];

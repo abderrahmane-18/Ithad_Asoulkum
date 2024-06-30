@@ -28,9 +28,9 @@
             <table class="table align-middle table-row-dashed fs-6 gy-5" id="datatable">
                 <thead>
                     <tr class="text-start text-dark fw-bolder fs-7 text-uppercase gs-0">
-                        <th class="min-w-250px">{{ __('dash.name') }}</th>
-                        <th class="min-w-250px">{{ __('dash.phone') }}</th>
-                        <th class="min-w-250px">{{ __('dash.city') }}</th>
+                        <th class="min-w-250px">{{ __('front.name') }}</th>
+                        <th class="min-w-250px">{{ __('front.company') }}</th>
+                        <th class="min-w-250px">{{ __('front.phone') }}</th>
                         <th class="min-w-250px">{{ __('dash.created_at') }}</th>
                         <th class="min-w-70px no-export">{{ __('dash.actions') }}</th>
                     </tr>
@@ -42,10 +42,10 @@
                                 {{ $record->name }}
                             </td>
                             <td>
-                                {{ $record->phone }}
+                                {{ $record->company }}
                             </td>
                             <td>
-                                {{ $record->city }}
+                                {{ $record->phone }}
                             </td>
                             <td>{{ $record->created_at }}</td>
                             <x-action-btn.join_us :record="$record" />
