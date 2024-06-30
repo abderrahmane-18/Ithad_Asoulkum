@@ -68,11 +68,24 @@ return [
     'powered_by' => 'Powered By ',
     'dev' => 'Abdou ',
 
+
     'home' => 'Home',
     'faq' => 'FAQ',
     'join-us' => 'Join Us',
     'Upload' => 'Upload',
-    'upload_fal_pdf' => 'Upload FAL PDF File',
-
+    'upload_fal_pdf' => 'Upload File PDF',
+    'to_be_pattren' => 'Be our partner in success',
+    'website_name' => 'Website',
+    'jop_title' => 'Job Title',
+    'company' => 'Company/Institution',
+    'choose_type_partner' => 'Type of Partnership',
+    'Real estate platform' => 'Real Estate Platform',
+    'Investor' => 'Investor',
+    'Real estate office' => 'Real Estate Office',
+    'Certified real estate marketer' => 'Certified Real Estate Marketer',
+    'Certified notary' => 'Certified Notary',
+    'Collaborator' => 'Collaborator',
+    'notes' => 'Other Inquiries',
+    'agree' => 'I confirm the accuracy of the information entered above',
 
 ];

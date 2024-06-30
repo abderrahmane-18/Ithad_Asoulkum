@@ -9,7 +9,7 @@
             {{ __('front.to_be_pattren') }}
         </span>
     </h1>
-    <form class="join flex flex-col gap-24 w-8/12 mx-auto relative " id="join_form">
+    <form class="join flex flex-col gap-24 md:w-8/12 mx-auto relative " id="join_form">
         <div {{ app()->getLocale() == 'ar' ? 'data-aos=fade-right' : 'data-aos=fade-left' }}
             class="grid grid-cols-1 md:grid-cols-2 gap-10 px-4 md:px-12 py-6   w-12/12 relative ">
 

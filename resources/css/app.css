@@ -71,33 +71,33 @@ body {
     right: -60px;
 }
 
-.join .nice-select:after {
+.ar .join .nice-select:after {
     right: auto;
     left: 12px;
 }
-.join .nice-select {
+.ar .join .nice-select {
     text-align: right !important;
 }
-.join .nice-select.open .list {
+.ar .join .nice-select.open .list {
     width: 100%;
 }
 
-.join .nice-select .option {
+.ar .join .nice-select .option {
     text-align: right !important;
 }
 
-.home .ar .nice-select:after {
+.ar .home .nice-select:after {
     right: auto;
     left: 12px;
 }
-.home .ar .nice-select,
-.home .ar .nice-select .option {
+.ar .home .nice-select,
+.ar .home .nice-select .option {
     padding-right: 28px;
     padding-left: 160px;
     text-align: start;
 }
-.home .en .nice-select,
-.home .en .nice-select .option {
+.en .home .nice-select,
+.en .home .nice-select .option {
     padding-left: 28px;
     padding-right: 160px;
     text-align: start;
@@ -127,14 +127,14 @@ body {
         padding-left: 120px;
     }
 
-    .home .ar .nice-select .option,
-    .home .ar .nice-select {
+    .ar .home .nice-select .option,
+    .ar .home .nice-select {
         padding-right: 28px;
         padding-left: 60px;
     }
 
-    .home .en .nice-select .option,
-    .home .en .nice-select {
+    .en .home .nice-select .option,
+    .en .home .nice-select {
         padding-left: 28px;
         padding-right: 60px;
     }

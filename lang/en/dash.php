@@ -53,5 +53,11 @@ return [
     'new_password' => 'New password',
     'password_confirmation' => 'Password confirmation',
     'number_reservation' => 'Number Reservation',
+    'edit' => 'Edit',
+    'delete' => 'Delete',
+    'question' => 'Question',
+    'answer' => 'Answer',
+    'reorder_data' => 'Reorder Data',
+    'faqs' => 'FAQs',
 
 ];

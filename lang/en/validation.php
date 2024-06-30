@@ -193,6 +193,32 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'name' => 'Name',
+        'company' => 'Company / Organization',
+        'job_title' => 'Job Title',
+        'city' => 'City',
+        'phone' => 'Phone',
+        'email' => 'Email',
+        'website_name' => 'Website',
+        'type_partner' => 'Type of Partnership',
+        'notes' => 'Inquiries',
+
+        'footer_description_en' => 'Footer Description in English',
+        'footer_description_ar' => 'Footer Description in Arabic',
+        'keywords' => 'Keywords',
+        'description_en' => 'Description in English',
+        'description_ar' => 'Description in Arabic',
+        'website_name_ar' => 'Website Name in Arabic',
+        'website_name_en' => 'Website Name in English',
+        'password' => 'Password',
+        'password_confirmation' => 'Password Confirmation',
+        'answer_ar' => 'Answer in Arabic',
+        'answer_en' => 'Answer in English',
+        'question_ar' => 'Question in Arabic',
+        'question_en' => 'Question in English',
+        'agree' => 'Agree to the Accuracy of the Information',
+
+    ],
 
 ];
