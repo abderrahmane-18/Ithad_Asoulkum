@@ -41,10 +41,10 @@
                         <x-inputs.text label="{{ __('dash.question') . ' En' }}" name="question_en" required=""
                             data="{{ isset($data) ? $data->question_en : '' }}" />
 
-                        <x-inputs.textarea label="{{ __('dash.answer') . ' Ar' }}" name="answer_en" required=""
+                        <x-inputs.textarea label="{{ __('dash.answer') . ' Ar' }}" name="answer_ar" required=""
                             data="{{ isset($data) ? $data->answer_ar : '' }}" />
 
-                        <x-inputs.textarea label="{{ __('dash.answer') . ' En' }}" name="answer_ar" required=""
+                        <x-inputs.textarea label="{{ __('dash.answer') . ' En' }}" name="answer_en" required=""
                             data="{{ isset($data) ? $data->answer_en : '' }}" />
                     </div>
                 </div>
