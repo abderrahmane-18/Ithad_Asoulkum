@@ -54,4 +54,12 @@ return [
     'new_password' => 'كلمة المرور الجديدة',
     'password_confirmation' => 'تأكيد كلمة المرور',
     'number_reservation' => 'عدد الحجوزات',
+    'edit' => 'تعديل',
+    'delete' => 'حذف',
+    'question' => 'السؤال ',
+    'answer' => 'الجواب ',
+    'reorder_data' => 'ترتيب البيانات',
+    'faqs' => 'سؤال شائعة',
+    '' => '',
+    '' => '',
 ];

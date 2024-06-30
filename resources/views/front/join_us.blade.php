@@ -76,7 +76,7 @@
 @endsection
 
 @push('script')
-    <x-js.form />
+    <x-js.form_front />
     <script>
         $(document).ready(function() {
             $('#join_form').submit(function(e) {

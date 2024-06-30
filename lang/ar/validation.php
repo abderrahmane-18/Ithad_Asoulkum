@@ -204,6 +204,21 @@ return [
         'website_name' => 'الموقع الإالكتروني',
         'type_partner' => 'نوع الشراكة',
         'notes' => 'الاستفسارات',
+
+        'footer_description_en' => 'وصف الفوتر بالإنجليزي',
+        'footer_description_ar' => 'وصف الفوتر بالعربي',
+        'keywords' => 'الكلمات المقتاحية',
+        'description_en' => 'الوصف بالانجليزي',
+        'description_ar' => 'الوصف بالعربي',
+        'website_name_ar' => 'اسم الموقع بالعربي',
+        'website_name_en' => 'اسم الموقع بالانجليزي',
+        'password ' => 'كلمة المرور',
+        'password_confirmation ' => 'تأكيد كلمة المرور',
+        'answer_ar' => 'الجواب بالعربي',
+        'answer_en' => 'الجواب بالانجليزي',
+        'question_ar' => 'السؤال بالعربي',
+        'question_en' => 'السؤال بالانجليزي',
+        '' => '',
     ],
 
 ];

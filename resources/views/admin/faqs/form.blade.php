@@ -35,16 +35,16 @@
                 </div>
                 <div class="card-body py-0">
                     <div class="row">
-                        <x-inputs.text label="{{ __('dash.question') . 'Ar' }}" name="question_ar" required=""
+                        <x-inputs.text label="{{ __('dash.question') . ' Ar' }}" name="question_ar" required=""
                             data="{{ isset($data) ? $data->question_ar : '' }}" />
 
-                        <x-inputs.text label="{{ __('dash.question') . 'En' }}" name="question_en" required=""
+                        <x-inputs.text label="{{ __('dash.question') . ' En' }}" name="question_en" required=""
                             data="{{ isset($data) ? $data->question_en : '' }}" />
 
-                        <x-inputs.textarea label="{{ __('dash.answer') . 'Ar' }}" name="answer_en" required=""
+                        <x-inputs.textarea label="{{ __('dash.answer') . ' Ar' }}" name="answer_en" required=""
                             data="{{ isset($data) ? $data->answer_en : '' }}" />
 
-                        <x-inputs.textarea label="{{ __('dash.answer') . 'En' }}" name="answer_ar" required=""
+                        <x-inputs.textarea label="{{ __('dash.answer') . ' En' }}" name="answer_ar" required=""
                             data="{{ isset($data) ? $data->answer_ar : '' }}" />
                     </div>
                 </div>

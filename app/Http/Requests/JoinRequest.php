@@ -30,7 +30,7 @@ class JoinRequest extends FormRequest
             'email' => 'required|string|max:191',
             'website_name' => 'required|string|max:191',
             'type_partner' => 'required|string|max:191',
-            'notes' => 'required|string|max:1000',
+            'notes' => 'nullable|string|max:1000',
 
             // 'fal' => 'required|max:' . getMaxSize() . '|mimes:' . acceptFileType(0),
         ];

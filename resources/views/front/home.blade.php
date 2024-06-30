@@ -149,7 +149,7 @@
 @endsection
 
 @push('script')
-    <x-js.form />
+    <x-js.form_front />
     <script>
         $(document).ready(function() {
             let type_service = {

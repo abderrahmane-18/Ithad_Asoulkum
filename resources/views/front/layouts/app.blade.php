@@ -38,6 +38,8 @@
         Main Content
     --------------->
     <main class="py-32 relative min-h-[800px] overflow-hidden">
+
+        @include('front.layouts.nav_md')
         @yield('content')
     </main>
 
