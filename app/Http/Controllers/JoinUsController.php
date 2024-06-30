@@ -36,6 +36,7 @@ class JoinUsController extends Controller
         // $data['filename'] = $request->fal->getClientOriginalName();
 
         $data = $request->validated();
+        unset($data['agree']);
         JoinUs::create($data);
 
         $status = true;

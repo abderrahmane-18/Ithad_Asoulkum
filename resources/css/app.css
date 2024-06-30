@@ -11,6 +11,10 @@
     }
 }
 
+.link:before {
+    transition: 300ms ease-in-out;
+}
+
 body {
     scroll-behavior: smooth;
 }
