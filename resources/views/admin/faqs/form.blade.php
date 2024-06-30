@@ -42,10 +42,10 @@
                             data="{{ isset($data) ? $data->question_en : '' }}" />
 
                         <x-inputs.textarea label="{{ __('dash.answer') . ' Ar' }}" name="answer_en" required=""
-                            data="{{ isset($data) ? $data->answer_en : '' }}" />
+                            data="{{ isset($data) ? $data->answer_ar : '' }}" />
 
                         <x-inputs.textarea label="{{ __('dash.answer') . ' En' }}" name="answer_ar" required=""
-                            data="{{ isset($data) ? $data->answer_ar : '' }}" />
+                            data="{{ isset($data) ? $data->answer_en : '' }}" />
                     </div>
                 </div>
             </div>
