@@ -1,6 +1,6 @@
 @extends('front.layouts.app')
 @section('content')
-    <div class="p-5 bg-light-blue">
+    <div class="p-5 ">
         <div class="flex justify-center items-start my-2">
             <div class="w-full sm:w-10/12 md:w-1/2 my-1">
                 <h1 data-aos="fade-down"

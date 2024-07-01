@@ -16,6 +16,11 @@
             <div class="hidden xl:block"
                 {{ app()->getLocale() == 'ar' ? 'data-aos=fade-right' : 'data-aos=fade-left' }}>
                 <ul class="flex flex-wrap   items-center justify-center gap-4  ">
+                    <li>
+                        <a href="{{ route('about.index') }}" class="link">
+                            <span>{{ __('front.about_itihad') }}</span>
+                        </a>
+                    </li>
 
                     <li>
                         <a href="{{ route('join_us.show') }}" class="link">

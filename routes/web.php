@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\FaqPageController;
 use App\Http\Controllers\Admin\HomeDashController;
 use App\Http\Controllers\Admin\LoginController;
@@ -96,3 +97,5 @@ Route::post('join_us/store', [JoinUsController::class, 'join'])->name('join_us.s
 Route::get('join_us', [JoinUsController::class, 'show'])->name('join_us.show');
 
 Route::get('faq', [FaqController::class, 'index'])->name('faq.index');
+
+Route::get('about', [AboutController::class, 'index'])->name('about.index');
