@@ -15,7 +15,7 @@ export default {
                 "primary-100": "#d7eff1",
             },
             fontFamily: {
-                sans: ["Cairo", ...defaultTheme.fontFamily.sans],
+                // sans: ["Cairo", ...defaultTheme.fontFamily.sans],
             },
         },
     },

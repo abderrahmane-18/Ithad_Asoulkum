@@ -42,14 +42,14 @@
 
                     @if (getLocale() == 'en')
                         <li>
-                            <a href="{{ route('lang.switchLang', 'ar') }}"
+                            <a href="{{ route('lang.switchLang', 'ar') }}" style="font-family: Dinar, sans-serif"
                                 class=" text-sm  w-20 h-8 md:text-base md:w-28 md:h-12 flex items-center justify-center rounded-xl font-normal transition duration-300 border border-primary text-secondary hover:bg-primary hover:text-white">
                                 العربية
                             </a>
                         </li>
                     @else
                         <li>
-                            <a href="{{ route('lang.switchLang', 'en') }}"
+                            <a href="{{ route('lang.switchLang', 'en') }}" style="font-family: 'Cairo', sans-serif;"
                                 class="text-sm  w-20 h-8 md:text-base md:w-28 md:h-12 flex items-center justify-center rounded-xl font-normal transition duration-300 border border-primary text-secondary hover:bg-primary hover:text-white">
                                 English
                             </a>

@@ -46,7 +46,6 @@
                 </h1>
                 <div class="min-h-96 text-neutral-800">
                     {!! $privacy !!}
-
                 </div>
             </div>
         </div>

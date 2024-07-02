@@ -19,9 +19,9 @@
         href="{{ asset(\App\Models\Setting::where('setting_key', 'favicon')->first()->setting_value) }}" />
 
     {{-- fonts --}}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    {{-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet"> --}}
 
     <link href="{{ asset('assets/lib/aos.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('assets/lib/nice-select.css') }}" />
@@ -29,6 +29,25 @@
 
     <title>{{ \App\Models\Setting::where('setting_key', 'website_name_' . getLocale())->first()->setting_value }}
     </title>
+    <style>
+        @font-face {
+            font-family: "Dinar";
+            src: url({{ asset('assets/font/GE-Dinar-One-Medium.otf') }});
+        }
+
+        @if (getLocale() == 'ar')
+
+            body {
+                font-family: Dinar, sans-serif
+            }
+
+        @else
+
+            body {
+                font-family: "Cairo", sans-serif;
+            }
+        @endif
+    </style>
 </head>
 
 <body class="scroll-smooth overflow-x-hidden {{ app()->getLocale() == 'ar' ? 'ar' : 'en' }}">
