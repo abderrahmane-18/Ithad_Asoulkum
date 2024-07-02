@@ -27,31 +27,35 @@
                         @if ($youtube)
                             <a href="{{ $youtube }}" target="__blanc"
                                 class="transition duration-300  hover:opacity-40">
-                                <img src="{{ asset('assets/youtube.png') }}" alt="youtube" class="w-7 h-7" />
+                                <img src="{{ asset('assets/youtube.png') }}" alt="youtube"
+                                    class="w-7 h-7 object-cover" />
                             </a>
                         @endif
                         @if ($twitter)
                             <a href="{{ \App\Models\Setting::where('setting_key', 'twitter')->first()->setting_value }} "
                                 target="__blanc" class="transition duration-300  hover:opacity-40">
-                                <img src="{{ asset('assets/x.png') }}" alt="twitter" class="w-7 h-7" />
+                                <img src="{{ asset('assets/x.png') }}" alt="twitter" class="w-7 h-7 object-cover" />
                             </a>
                         @endif
                         @if ($tiktok)
                             <a href="{{ \App\Models\Setting::where('setting_key', 'tiktok')->first()->setting_value }} "
                                 target="__blanc" class="transition duration-300  hover:opacity-40">
-                                <img src="{{ asset('assets/tiktok.png') }}" alt="tiktok" class="w-7 h-7" />
+                                <img src="{{ asset('assets/tiktok.png') }}" alt="tiktok"
+                                    class="w-7 h-7 object-cover" />
                             </a>
                         @endif
                         @if ($instagram)
                             <a href="{{ \App\Models\Setting::where('setting_key', 'instagram')->first()->setting_value }} "
                                 target="__blanc" class="transition duration-300  hover:opacity-40">
-                                <img src="{{ asset('assets/instagram.png') }}" alt="instagram" class="w-7 h-7" />
+                                <img src="{{ asset('assets/instagram.png') }}" alt="instagram"
+                                    class="w-7 h-7 object-cover" />
                             </a>
                         @endif
                         @if ($snapchat)
                             <a href="{{ \App\Models\Setting::where('setting_key', 'snapchat')->first()->setting_value }} "
                                 target="__blanc" class="transition duration-300  hover:opacity-40">
-                                <img src="{{ asset('assets/snapchat.png') }}" alt="snapchat" class="w-7 h-7" />
+                                <img src="{{ asset('assets/snapchat.png') }}" alt="snapchat"
+                                    class="w-7 h-7 object-cover" />
                             </a>
                         @endif
                     </div>
