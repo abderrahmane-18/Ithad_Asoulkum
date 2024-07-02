@@ -79,9 +79,11 @@ return [
     'Real estate platform' => 'منصة عقارية  ',
     'Investor' => 'مستثمر ',
     'Real estate office' => 'مكتب عقاري ',
+    'Property owner' => ' مالك عقار ',
+
     'Certified real estate marketer' => 'مسوق عقاري معتمد  ',
     'Certified notary' => 'موثق معتمد',
-    'Collaborator' => 'متعاون ',
+    'Collaborator' => 'شريك استراتيجي ',
     'notes' => 'استفسارات أخرى ',
 
     'agree' => 'أقر بصحة إدخال معلوماتي أعلاه ',

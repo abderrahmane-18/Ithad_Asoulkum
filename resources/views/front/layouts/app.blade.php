@@ -38,7 +38,7 @@
         @if (getLocale() == 'ar')
 
             body {
-                font-family: Dinar, sans-serif
+                font-family: Dinar, sans-serif;
             }
 
         @else

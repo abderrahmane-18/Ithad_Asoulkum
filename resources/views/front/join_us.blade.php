@@ -56,6 +56,8 @@
                     <option value="{{ __('front.Real estate platform') }}">{{ __('front.Real estate platform') }}</option>
                     <option value="{{ __('front.Investor') }}">{{ __('front.Investor') }}</option>
                     <option value="{{ __('front.Real estate office') }}">{{ __('front.Real estate office') }}</option>
+                    <option value="{{ __('front.Property owner') }}">{{ __('front.Property owner') }}</option>
+
                     <option value="{{ __('front.Certified real estate marketer') }}">
                         {{ __('front.Certified real estate marketer') }}</option>
                     <option value="{{ __('front.Certified notary') }}">{{ __('front.Certified notary') }}</option>

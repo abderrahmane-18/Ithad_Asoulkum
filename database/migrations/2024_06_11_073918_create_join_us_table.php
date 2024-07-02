@@ -15,15 +15,15 @@ return new class extends Migration
             $table->id();
             // $table->string('filename');
             // $table->string('filepath');
-            $table->string('name');
-            $table->string('company');
-            $table->string('jop_title');
-            $table->string('city');
-            $table->string('phone');
-            $table->string('email');
-            $table->string('website_name');
-            $table->string('type_partner');
-            $table->text('notes');
+            $table->string('name')->nullable();
+            $table->string('company')->nullable();
+            $table->string('jop_title')->nullable();
+            $table->string('city')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
+            $table->string('website_name')->nullable();
+            $table->string('type_partner')->nullable();
+            $table->text('notes')->nullable();
             $table->timestamps();
         });
     }
