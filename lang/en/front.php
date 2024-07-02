@@ -87,6 +87,8 @@ return [
     'Collaborator' => 'Collaborator',
     'notes' => 'Other Inquiries',
     'agree' => 'I confirm the accuracy of the information entered above',
-    'about_itihad' => 'about oslcom',
-
+    'about_itihad' => 'About Oslcom',
+    'about_us' => 'About Us',
+    'terms' => 'Terms and Conditions',
+    'privacy' => 'Privacy',
 ];

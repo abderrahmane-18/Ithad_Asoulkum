@@ -187,5 +187,65 @@ class SettingSeeder extends Seeder
             "category" => "2",
             "order_by" => "1",
         ]);
+
+        Setting::create([
+            "setting_key" => "about_us_ar",
+            "setting_value" => "11",
+            "title_ar" => "من نحن بالعربي",
+            "title_en" => "About Us Ar",
+            "type_id" => "10",
+            "category" => "10",
+            "order_by" => "1",
+        ]);
+
+        Setting::create([
+            "setting_key" => "about_us_en",
+            "setting_value" => "11",
+            "title_ar" => "من نحن بالإنجليزي",
+            "title_en" => "About Us En",
+            "type_id" => "10",
+            "category" => "10",
+            "order_by" => "1",
+        ]);
+
+        Setting::create([
+            "setting_key" => "terms_ar",
+            "setting_value" => "11",
+            "title_ar" => "الشروط والاحكام بالعربي",
+            "title_en" => "Terms and Conditions Ar",
+            "type_id" => "10",
+            "category" => "10",
+            "order_by" => "1",
+        ]);
+
+        Setting::create([
+            "setting_key" => "terms_en",
+            "setting_value" => "11",
+            "title_ar" => "الشروط والاحكام بالإنجليزي",
+            "title_en" => "Terms and Conditions En",
+            "type_id" => "10",
+            "category" => "10",
+            "order_by" => "1",
+        ]);
+
+        Setting::create([
+            "setting_key" => "privacy_en",
+            "setting_value" => "11",
+            "title_ar" => "الخصوصية  بالإنجليزي",
+            "title_en" => "Privacy En",
+            "type_id" => "10",
+            "category" => "10",
+            "order_by" => "1",
+        ]);
+
+        Setting::create([
+            "setting_key" => "privacy_ar",
+            "setting_value" => "11",
+            "title_ar" => "الخصوصية  بالعربي",
+            "title_en" => "Privacy Ar",
+            "type_id" => "10",
+            "category" => "10",
+            "order_by" => "1",
+        ]);
     }
 }

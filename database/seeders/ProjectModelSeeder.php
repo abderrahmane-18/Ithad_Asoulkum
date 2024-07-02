@@ -52,6 +52,17 @@ class ProjectModelSeeder extends Seeder
 
         ProjectModel::create([
             'parent_id' => '4',
+            'title_ar' => 'صفحة عن اصولكم',
+            'route_key' => 'about',
+            'title_en' => 'About',
+
+            "is_menu" => '1',
+            "icon" =>  'fas fa-users',
+            "order_by" => '1'
+        ]);
+
+        ProjectModel::create([
+            'parent_id' => '4',
             'title_ar' => 'صفحة الاسئلة',
             'route_key' => 'faqs',
             'model' => 'Faq',

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Admin\AboutController as AdminAboutController;
 use App\Http\Controllers\Admin\FaqPageController;
 use App\Http\Controllers\Admin\HomeDashController;
 use App\Http\Controllers\Admin\LoginController;
@@ -72,7 +73,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::post('/settings', [SettingController::class, 'update'])->name('dashboard.settings.update');
 
 
-    //pages
+    //pages  == faqs
     Route::get('faqs', [FaqPageController::class, 'index'])->name('dashboard.faqs.index');
     Route::get('faqs/create', [FaqPageController::class, 'create'])->name('dashboard.faqs.create');
     Route::post('faqs/store', [FaqPageController::class, 'store'])->name('dashboard.faqs.store');
@@ -81,6 +82,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::delete('faqs/{obj}/delete', [FaqPageController::class, 'destroy'])->name('dashboard.faqs.destroy');
 
 
+    //pages  == about
+    Route::get('about', [AdminAboutController::class, 'edit'])->name('dashboard.about.index');
+    Route::post('about/update', [AdminAboutController::class, 'update'])->name('dashboard.about.update');
 
 
 

@@ -3,6 +3,12 @@
     {{ app()->getLocale() == 'ar' ? 'data-aos=fade-right' : 'data-aos=fade-left' }}>
     <ul class="flex flex-col items-start justify-center gap-8">
         <li>
+            <a href="{{ route('about.index') }}" class="link">
+                <span>{{ __('front.about_itihad') }}</span>
+            </a>
+        </li>
+
+        <li>
             <a href="{{ route('join_us.show') }}" class="link">
                 <span>{{ __('front.home') }}</span>
             </a>
