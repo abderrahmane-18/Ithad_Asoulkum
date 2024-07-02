@@ -20,7 +20,7 @@
             <div class="flex gap-20 flex-wrap px-12 py-6 ">
                 <div class="flex flex-col items-center  gap-1  relative">
                     <select name="service"
-                        class="rounded-lg service bg-transparent border border-none text-neutral-600 font-bold">
+                        class="select rounded-lg service bg-transparent border border-none text-neutral-600 font-bold">
                         <option value="0" data-display="{{ __('front.Choose services') }}">
                             {{ __('front.Choose services') }}
                         </option>
@@ -35,7 +35,7 @@
                 </div>
                 <div class=" div_type_service flex flex-col items-center gap-1  relative">
                     <select name="type_service"
-                        class="rounded-lg service bg-transparent border border-none text-neutral-600 font-bold">
+                        class=" select rounded-lg service bg-transparent border border-none text-neutral-600 font-bold">
                         <option value="0" data-display=" {{ __('front.Type of service') }}">
                             {{ __('front.Type of service') }}
                         </option>
@@ -98,7 +98,7 @@
                     </div>
                 </div>
                 <div class="type_mony col-span-3 sm:col-span-2 lg:col-span-1  ">
-                    <select name="type_mony" id="type_mony">
+                    <select class="select" name="type_mony" id="type_mony">
                         <option value="0" data-display=" {{ __('front.type_mony') }}" disabled>
                             {{ __('front.type_mony') }}
                         </option>
@@ -246,7 +246,7 @@
                     url: "{{ route('form.store') }}",
                     data: data,
                     success: function(response) {
-                        form.find(':input:not(.datepicker):not(.checkbox)').val('');
+                        form.find(':input:not(.select):not(.checkbox)').val('');
                         if (response.status) {
                             SwalModal(response.msg, 'success');
                         } else {

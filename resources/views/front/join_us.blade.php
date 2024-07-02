@@ -49,7 +49,7 @@
             </div>
 
             <div class="">
-                <select name="type_partner" class="input_join">
+                <select name="type_partner" class="input_join select">
                     <option disabled value="0" selected data-display="{{ __('front.choose_type_partner') }}">
                         {{ __('front.choose_type_partner') }}
                     </option>
@@ -103,7 +103,7 @@
                     processData: false,
 
                     success: function(response) {
-                        form.find(':input:not(.datepicker):not(.checkbox)').val('');
+                        form.find(':input:not(.select):not(.checkbox)').val('');
                         if (response.status) {
                             SwalModal(response.msg, 'success');
                         } else {
