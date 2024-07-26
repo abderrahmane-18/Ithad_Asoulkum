@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\FaqPageController;
 use App\Http\Controllers\Admin\HomeDashController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\ProfileController;
+use App\Http\Controllers\Admin\RegisterController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\FaqController;
@@ -40,7 +41,7 @@ Route::get('lang/{lang}', [LanguageController::class, 'switchLang'])->name('lang
 Route::group(['prefix' => 'admin', 'middleware' => 'guest'], function () {
     //auth
     Route::get('login', [LoginController::class, 'index'])->name('dashboard.login.index');
-    Route::post('admin/login/submit', [LoginController::class, 'login'])->name('dashboard.login.form');
+    Route::post('login/submit', [LoginController::class, 'login'])->name('dashboard.login.form');
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
@@ -86,7 +87,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('about', [AdminAboutController::class, 'edit'])->name('dashboard.about.index');
     Route::post('about/update', [AdminAboutController::class, 'update'])->name('dashboard.about.update');
 
-
+    Route::get('login', [LoginController::class, 'index'])->name('dashboard.login.index');
+    Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('dashboard.register');
+    Route::post('Register/submit', [RegisterController::class, 'login'])->name('dashboard.register.submit');
 
     //reservation
     Route::get('reservations', [ReservationController::class, 'index'])->name('dashboard.reservations.index');
